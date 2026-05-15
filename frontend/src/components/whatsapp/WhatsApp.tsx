@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { apiService } from "../../services/api";
 import "./WhatsApp.css";
-import { Users, UserPlus } from "lucide-react";
+import { Users } from "lucide-react";
 
 const WhatsApp: React.FC = () => {
   const [whatsappLink, setWhatsappLink] = useState(
