@@ -6,7 +6,7 @@ import { Users } from "lucide-react";
 
 const WhatsApp: React.FC = () => {
   const [whatsappLink, setWhatsappLink] = useState(
-    "https://chat.whatsapp.com/FLHI3GHYtotLVKaqbd6tJU?mode=gi_t",
+    "https://chat.whatsapp.com/E3fGCGPSfNOGWb7u7cWscm?mode=gi_t",
   );
 
   useEffect(() => {

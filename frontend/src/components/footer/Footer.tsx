@@ -105,8 +105,7 @@ const Footer: React.FC = () => {
             </button>
           </form>
           <div className="footer-contact">
-            <p>📧 contact@aveksonko2029.sn</p>
-            <p>📞 +221 78 000 00 00</p>
+            <p>📧 pastef.online@gmail.com</p>
           </div>
         </div>
       </div>

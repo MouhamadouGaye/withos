@@ -321,6 +321,8 @@
   display: flex;
   gap: 12px;
   text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-link {
