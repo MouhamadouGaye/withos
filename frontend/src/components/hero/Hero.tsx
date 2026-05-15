@@ -64,7 +64,7 @@ const Hero: React.FC<HeroSectionProps> = ({ onJoinClick }) => {
           <span className="title-line">pour le Sénégal</span>
         </h1>
         <p className="hero-subtitle">
-          Rejoignez la mabilisation des Patriotes Africains du Sénégal pour le
+          Rejoignez la mobilisation des Patriotes Africains du Sénégal pour le
           Travail, l'Éthique et la Fraternité. Ensemble, construisons un Sénégal
           souverain et prospère.
         </p>
