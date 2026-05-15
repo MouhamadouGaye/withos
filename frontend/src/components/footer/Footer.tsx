@@ -102,7 +102,11 @@ const Footer: React.FC = () => {
           <p className="newsletter-text">
             Restez informé des actualités du mouvement
           </p>
-          <form className="newsletter-form" onSubmit={handleSubmit}>
+          <form
+            className="newsletter-form"
+            id="newsletter-form"
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               placeholder="Votre email"

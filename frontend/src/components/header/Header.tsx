@@ -53,7 +53,7 @@ const Header: React.FC = () => {
   }, []);
 
   const scrollToForm = () => {
-    const formElement = document.getElementById("support-form");
+    const formElement = document.getElementById("whatsapp-card");
     formElement?.scrollIntoView({ behavior: "smooth" });
   };
 
