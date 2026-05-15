@@ -5,6 +5,17 @@ import "./Footer.css";
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleSubmit = (e: React.FormEvent) => {
+    // sending email via mailto link
+    e.preventDefault();
+
+    const email = (
+      document.querySelector(".newsletter-input") as HTMLInputElement
+    ).value;
+
+    window.location.href = `mailto:pastef.online@gmail.com?subject=Newsletter&body=Bonjour, je souhaite rejoindre la newsletter avec cet email : ${email}`;
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -91,10 +102,7 @@ const Footer: React.FC = () => {
           <p className="newsletter-text">
             Restez informé des actualités du mouvement
           </p>
-          <form
-            className="newsletter-form"
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="newsletter-form" onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Votre email"
@@ -105,7 +113,7 @@ const Footer: React.FC = () => {
             </button>
           </form>
           <div className="footer-contact">
-            <p>📧 pastef.online@gmail.com</p>
+            <p>pastef.online@gmail.com</p>
           </div>
         </div>
       </div>

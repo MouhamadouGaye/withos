@@ -435,7 +435,7 @@ body {
 }
 
 .stat-label {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 
   color: var(--text-soft);
 }
