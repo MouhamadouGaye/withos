@@ -1,0 +1,36 @@
+/* frontend/src/components/MorphingSection.css */
+.morphing-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 20px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --morph-progress: 0;
+}
+
+.morphing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 107, 53, calc(var(--morph-progress) * 0.3)),
+    rgba(255, 140, 66, calc(var(--morph-progress) * 0.1))
+  );
+  clip-path: circle(calc(0% + var(--morph-progress) * 100%) at center);
+  transition: clip-path 0.5s ease;
+  z-index: -1;
+}
+
+.morphing-section.visible {
+  transform: scale(1.02);
+}
+/* 
+.morphing-content {
+  transform: translateY(calc(50px * (1 - var(--morph-progress))));
+  opacity: calc(0.3 + var(--morph-progress) * 0.7);
+  transition: all 0.5s ease;
+} */

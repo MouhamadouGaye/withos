@@ -1,0 +1,28 @@
+/* frontend/src/styles/futuristic.css */
+.morphing-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  animation: morphShape 8s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes morphShape {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.2),
+      rgba(255, 140, 66, 0.1)
+    );
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.3),
+      rgba(255, 140, 66, 0.2)
+    );
+  }
+}

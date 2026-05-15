@@ -1,0 +1,40 @@
+# Vérifier quel utilisateur PostgreSQL existe
+psql -l
+
+# Ou essayez avec votre nom d'utilisateur système
+psql -U $(whoami) -h localhost -p 5432
+
+# Souvent sur macOS, l'utilisateur est votre nom d'utilisateur système
+psql -U gaye -h localhost -p 5432
+
+
+# Se connecter avec l'utilisateur par défaut (souvent votre nom)
+psql -U $(whoami) -d postgres -h localhost -p 5432
+
+# Une fois connecté, lister les rôles
+\du
+
+# Si vous voyez votre rôle, vous pouvez créer l'utilisateur postgres
+CREATE ROLE postgres WITH SUPERUSER LOGIN PASSWORD 'votre_mot_de_passe';
+
+
+Solution 2 : Lister tous les rôles PostgreSQL existants
+
+
+# Se connecter avec votre utilisateur actuel (probablement 'gaye')
+
+Solution 3 : Créer l'utilisateur postgres (Recommandé)
+
+psql -U gaye -d postgres -h localhost -p 5432
+
+# Une fois dans psql, exécuter :
+CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
+ALTER USER postgres WITH LOGIN;
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
+
+# Quitter
+\q
+
+# Maintenant tester la connexion
+psql -U postgres -h localhost -p 5432
+# Mot de passe: postgres

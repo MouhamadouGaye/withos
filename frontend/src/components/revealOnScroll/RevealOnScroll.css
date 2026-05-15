@@ -1,0 +1,13 @@
+/* frontend/src/components/RevealOnScroll.css */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  filter: blur(10px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}

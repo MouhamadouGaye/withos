@@ -1,0 +1,24 @@
+// backend/tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020", "ES2021"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": false,  // Mettre à true plus tard pour plus de sécurité
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": false,  // Pour démarrer plus facilement
+    "strictNullChecks": false  // Pour démarrer plus facilement
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}

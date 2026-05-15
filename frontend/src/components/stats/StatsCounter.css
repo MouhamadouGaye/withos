@@ -1,0 +1,47 @@
+/* frontend/src/components/StatsCounter.css */
+.stats-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea10, #764ba210);
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 40px 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}

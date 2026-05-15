@@ -1,0 +1,337 @@
+/* BumpTabs.css */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  font-family: sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.card {
+  width: 900px;
+  background: #141414;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: visible;
+  position: relative;
+  padding-top: 40px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.tab {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 18px 30px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.tab.active {
+  color: white;
+}
+
+.tab.active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+
+  width: 160px;
+  height: 80px;
+
+  background: #141414;
+
+  border-radius: 40px 40px 0 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+
+  z-index: -1;
+}
+
+.content {
+  padding: 80px 60px 60px;
+  color: white;
+}
+
+.content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 700px;
+} */
+/* BubbleTabs.css */
+/* 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.bubble-card {
+  width: 900px;
+  background: #151515;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: visible;
+}
+
+
+.tabs-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 30px 0;
+  gap: 20px;
+}
+
+
+.bubble {
+  position: absolute;
+  top: -35px;
+  left: 30px;
+
+  width: 150px;
+  height: 80px;
+
+  background: #151515;
+
+  border-radius: 45px 45px 0 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 0;
+}
+
+
+.tab {
+  position: relative;
+  z-index: 2;
+
+  width: 150px;
+
+  background: transparent;
+  border: none;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  padding: 20px 0;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.tab.active {
+  color: white;
+}
+
+.content {
+  padding: 70px 60px 60px;
+  color: white;
+}
+
+.content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 700px;
+} */
+/* CurvedTabs.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #07195a;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* CONTAINER */
+.tabs-shell {
+  width: 100%;
+  position: relative;
+}
+
+/* NAV */
+.tabs-nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding-left: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+/* TAB */
+.tab-btn {
+  position: relative;
+
+  border: 1px solid transparent;
+  border-bottom: none;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  padding: 26px 36px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  border-radius: 24px 24px 0 0;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+/* ACTIVE TAB */
+.tab-btn.active {
+  color: white;
+
+  background: #07195a;
+
+  border-color: rgba(255, 255, 255, 0.22);
+
+  transform: translateY(1px);
+}
+
+/* PANEL */
+.panel {
+  margin-top: -1px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 38px;
+
+  background: #07195a;
+
+  min-height: 700px;
+
+  padding: 55px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+}
+
+/* LEFT */
+.panel-content h2 {
+  color: white;
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.panel-content p {
+  color: rgba(255, 255, 255, 0.8);
+
+  line-height: 1.8;
+
+  font-size: 22px;
+
+  max-width: 700px;
+
+  margin-bottom: 60px;
+}
+
+/* LIST */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.item span {
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.item h3 {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* IMAGE */
+.image-box {
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

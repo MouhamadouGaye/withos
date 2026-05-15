@@ -1,0 +1,27 @@
+/* frontend/src/components/TiltCard.css */
+.tilt-card {
+  position: relative;
+  transition: transform 0.1s ease-out;
+  cursor: pointer;
+}
+
+.tilt-card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.tilt-card-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tilt-card:hover .tilt-card-shine {
+  opacity: 1;
+}

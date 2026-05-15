@@ -1,0 +1,45 @@
+<!-- frontend/public/avecsonko2029-pulse.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="pulseGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="200" height="200" fill="transparent"/>
+  
+  <!-- Onde de pulsation (spectre cardiaque) -->
+  <path d="M 60,200 L 100,200 L 120,160 L 140,240 L 160,180 L 180,220 L 200,180 L 220,220 L 240,180 L 260,240 L 280,160 L 300,200 L 340,200" 
+        fill="none" stroke="#8B0000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Deuxième onde (décalée) -->
+  <path d="M 60,220 L 100,220 L 120,180 L 140,260 L 160,200 L 180,240 L 200,200 L 220,240 L 240,200 L 260,260 L 280,180 L 300,220 L 340,220" 
+        fill="none" stroke="#006400" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  
+  <!-- Point d'impact -->
+  <circle cx="200" cy="200" r="6" fill="#FFD700" filter="url(#pulseGlow)"/>
+  
+  <!-- Cercles concentriques -->
+  <circle cx="100" cy="200" r="20" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="100" cy="200" r="40" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.15"/>
+  
+  <!-- Texte -->
+  <text x="100" y="220" font-family="'Montserrat', sans-serif" 
+        font-size="16" font-weight="00" fill="#8B0000" text-anchor="middle" letter-spacing="8">
+    avec
+  </text>
+  
+  <text x="100" y="250" font-family="'Montserrat', sans-serif" 
+        font-size="32" font-weight="800" fill="#006400" text-anchor="middle" letter-spacing="3">
+    SONKO
+  </text>
+  
+  <text x="100" y="278" font-family="'Montserrat', sans-serif" 
+        font-size="18" font-weight="600" fill="#FFD700" text-anchor="middle" letter-spacing="8">
+    2029
+  </text>
+</svg>

@@ -1,0 +1,499 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+.hero-content-2027 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.neon-title-2027 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 20px rgba(119, 15, 15, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(185, 5, 5, 0.8);
+  }
+}
+
+.floating-text {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cyber-button {
+  position: relative;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+}
+
+.button-glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.cyber-button:hover .button-glitch {
+  transform: translateX(100%);
+}
+
+.stats-grid-2027 {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card-2027 {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(35deg, #ca491a, #21681e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+.stat-value:hover {
+  animation: valueGlow 3s ease-in-out infinite;
+  background: linear-gradient(35deg, #f44809, #0ac803);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.stat-card-2027:hover .stat-glow {
+  opacity: 1;
+  animation: rotateGlow 4s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-title-2027 {
+    font-size: 2.5rem;
+  }
+
+  .stats-grid-2027 {
+    gap: 15px;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+} */
+
+/* frontend/src/App.css */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --green-primary: #3ddc97;
+  --green-secondary: #1f8f63;
+  --green-dark: #071a12;
+  --green-card: #0d241a;
+  --green-soft: rgba(61, 220, 151, 0.15);
+  --green-border: rgba(61, 220, 151, 0.25);
+  --text-soft: rgba(255, 255, 255, 0.82);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(61, 220, 151, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(61, 220, 151, 0.06),
+      transparent 30%
+    ),
+    var(--green-dark);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero-content-2027 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.neon-title-2027 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3ddc97, #65f5b6, #1f8f63);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  display: inline-block;
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 20px rgba(61, 220, 151, 0.35),
+      0 0 40px rgba(61, 220, 151, 0.15);
+  }
+
+  50% {
+    text-shadow:
+      0 0 35px rgba(61, 220, 151, 0.65),
+      0 0 70px rgba(61, 220, 151, 0.3);
+  }
+}
+
+.floating-text {
+  font-size: 1.2rem;
+
+  opacity: 0.9;
+
+  color: var(--text-soft);
+
+  margin-bottom: 2rem;
+
+  animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.cyber-button {
+  position: relative;
+
+  padding: 15px 40px;
+
+  background: linear-gradient(
+    135deg,
+    var(--green-primary),
+    var(--green-secondary)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(61, 220, 151, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.cyber-button:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 25px rgba(61, 220, 151, 0.45),
+    0 0 60px rgba(61, 220, 151, 0.18);
+}
+
+.button-glitch {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: translateX(-100%);
+
+  transition: transform 0.5s ease;
+}
+
+.cyber-button:hover .button-glitch {
+  transform: translateX(100%);
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats-grid-2027 {
+  padding: 40px 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 30px;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.stat-card-2027 {
+  position: relative;
+
+  text-align: center;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  border: 1px solid var(--green-border);
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.stat-card-2027:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(61, 220, 151, 0.45);
+
+  background: rgba(61, 220, 151, 0.06);
+}
+
+.stat-value {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  background: linear-gradient(135deg, #65f5b6, #3ddc97, #1f8f63);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  margin-bottom: 10px;
+
+  transition: 0.4s ease;
+}
+
+.stat-value:hover {
+  animation: valueGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes valueGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 8px rgba(61, 220, 151, 0.25));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 18px rgba(61, 220, 151, 0.7));
+  }
+}
+
+.stat-label {
+  font-size: 1.1rem;
+
+  color: var(--text-soft);
+}
+
+/* ========================= */
+/* CARD GLOW */
+/* ========================= */
+
+.stat-glow {
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: radial-gradient(circle, rgba(61, 220, 151, 0.12), transparent);
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+.stat-card-2027:hover .stat-glow {
+  opacity: 1;
+
+  animation: rotateGlow 4s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .neon-title-2027 {
+    font-size: 2.8rem;
+  }
+
+  .stats-grid-2027 {
+    gap: 18px;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+  }
+
+  .stat-card-2027 {
+    padding: 28px;
+  }
+}

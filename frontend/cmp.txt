@@ -1,0 +1,11 @@
+# Installer axios pour les appels API
+npm install axios
+
+# Installer react-icons pour les icônes
+npm install react-icons
+
+# Installer react-countup pour les animations de compteurs
+npm install react-countup
+
+# Types pour TypeScript
+npm install --save-dev @types/react-countup

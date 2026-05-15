@@ -1,0 +1,47 @@
+/* frontend/src/components/WhatsAppSection.css */
+.whatsapp-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #25d36610, #128c7e10);
+}
+
+.whatsapp-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+  background: rgba(180, 179, 179, 0.109);
+  border-radius: 3px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.whatsapp-card h2 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.whatsapp-card p {
+  color: #bab8b8;
+  margin-bottom: 30px;
+}
+
+.whatsapp-btn {
+  background: #00ff5e;
+  color: rgb(67, 66, 66);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
