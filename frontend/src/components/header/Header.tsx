@@ -71,7 +71,7 @@ const Header: React.FC = () => {
         </div>
         <nav className="nav-menu">
           <button className="nav-btn" onClick={scrollToForm}>
-            Soutenir
+            Restons en contact
           </button>
         </nav>
       </div>
