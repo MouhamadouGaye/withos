@@ -60,11 +60,11 @@ const Hero: React.FC<HeroSectionProps> = ({ onJoinClick }) => {
         </div>
         <h1 className="hero-title">
           <span className="title-line">Avec</span>
-          <span className="highlight-gradient">Ousmane Sonko</span>
+          <span className="highlight-gradient">Ousmane Sonko 2029</span>
           <span className="title-line">pour le Sénégal</span>
         </h1>
         <p className="hero-subtitle">
-          Rejoignez la massification des Patriotes Africains du Sénégal pour le
+          Rejoignez la mabilisation des Patriotes Africains du Sénégal pour le
           Travail, l'Éthique et la Fraternité. Ensemble, construisons un Sénégal
           souverain et prospère.
         </p>
