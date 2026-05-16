@@ -30,8 +30,9 @@ const Footer: React.FC = () => {
             {/* <span className="footer-logo-text">Avec Sonko 2029</span> */}
           </div>
           <p className="footer-description">
-            Un mouvement citoyen et politique de soutien et de mobilisation basé
-            sur des valeurs souverainistes et éthiques
+            la mobilisation des Patriotes Africains du Sénégal pour le Travail,
+            l'Éthique et la Fraternité. Ensemble, construisons un Sénégal
+            souverain et prospère.
           </p>
           <div className="social-links">
             <a href="#" className="social-link">
