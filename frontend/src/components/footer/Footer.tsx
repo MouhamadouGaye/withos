@@ -80,35 +80,35 @@ const Footer: React.FC = () => {
           <ul className="footer-links">
             <li>
               <a href="#">
-                <Home size={16} style={{ marginRight: 8 }} />
+                <Home size={16} />
                 Accueil
               </a>
             </li>
 
             <li>
               <a href="#">
-                <BookOpen size={16} style={{ marginRight: 8 }} />
+                <BookOpen size={16} />
                 Le Programme
               </a>
             </li>
 
             <li>
               <a href="#">
-                <UserPlus size={16} style={{ marginRight: 8 }} />
+                <UserPlus size={16} />
                 Nous Rejoindre
               </a>
             </li>
 
             <li>
               <a href="#">
-                <Calendar size={16} style={{ marginRight: 8 }} />
+                <Calendar size={16} />
                 Événements
               </a>
             </li>
 
             <li>
               <a href="#">
-                <Mail size={16} style={{ marginRight: 8 }} />
+                <Mail size={16} />
                 Contact
               </a>
             </li>
