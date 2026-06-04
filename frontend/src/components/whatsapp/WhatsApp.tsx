@@ -26,7 +26,7 @@ const WhatsApp: React.FC = () => {
   };
 
   return (
-    <section className="whatsapp-section">
+    <section className="whatsapp-section" id="whatsapp-section">
       <div className="whatsapp-card" id="whatsapp-card">
         {/* <div className="whatsapp-icon">💚</div> */}
         <div
