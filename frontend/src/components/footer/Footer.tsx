@@ -1,5 +1,25 @@
 // frontend/src/components/Footer.tsx
 import React from "react";
+import {
+  Home,
+  BookOpen,
+  UserPlus,
+  Calendar,
+  Mail,
+  FileText,
+  ShieldCheck,
+  Newspaper,
+  BarChart3,
+  MessageCircle,
+  // Globe,
+  // MessageCircle,
+  // Camera,
+  // Video,
+  // Send,
+} from "lucide-react";
+
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+
 import "./Footer.css";
 
 const Footer: React.FC = () => {
@@ -33,7 +53,7 @@ const Footer: React.FC = () => {
             Plateforme citoyenne de soutien et de coordination des sympathisants
             de la vision portée par Ousmane Sonko
           </p>
-          <div className="social-links">
+          {/* <div className="social-links">
             <a href="#" className="social-link">
               📘
             </a>
@@ -49,49 +69,91 @@ const Footer: React.FC = () => {
             <a href="#" className="social-link">
               ▶️
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Section Liens Rapides */}
+
         <div className="footer-section">
           <h3 className="footer-title">Liens Rapides</h3>
+
           <ul className="footer-links">
             <li>
-              <a href="#">Accueil</a>
+              <a href="#">
+                <Home size={16} style={{ marginRight: 8 }} />
+                Accueil
+              </a>
             </li>
+
             <li>
-              <a href="#">Le Programme</a>
+              <a href="#">
+                <BookOpen size={16} style={{ marginRight: 8 }} />
+                Le Programme
+              </a>
             </li>
+
             <li>
-              <a href="#">Nous Rejoindre</a>
+              <a href="#">
+                <UserPlus size={16} style={{ marginRight: 8 }} />
+                Nous Rejoindre
+              </a>
             </li>
+
             <li>
-              <a href="#">Événements</a>
+              <a href="#">
+                <Calendar size={16} style={{ marginRight: 8 }} />
+                Événements
+              </a>
             </li>
+
             <li>
-              <a href="#">Contact</a>
+              <a href="#">
+                <Mail size={16} style={{ marginRight: 8 }} />
+                Contact
+              </a>
             </li>
           </ul>
         </div>
 
         {/* Section Ressources */}
+
         <div className="footer-section">
           <h3 className="footer-title">Ressources</h3>
+
           <ul className="footer-links">
             <li>
-              <a href="#">Télécharger le Manifeste</a>
+              <a href="#">
+                <FileText size={16} />
+                Télécharger le Manifeste
+              </a>
             </li>
+
             <li>
-              <a href="#">Guide du Militant</a>
+              <a href="#">
+                <BookOpen size={16} />
+                Guide du Militant
+              </a>
             </li>
+
             <li>
-              <a href="#">Charte Éthique</a>
+              <a href="#">
+                <ShieldCheck size={16} />
+                Charte Éthique
+              </a>
             </li>
+
             <li>
-              <a href="#">Communiqués de Presse</a>
+              <a href="#">
+                <Newspaper size={16} />
+                Communiqués de Presse
+              </a>
             </li>
+
             <li>
-              <a href="#">Rapports d'Activités</a>
+              <a href="#">
+                <BarChart3 size={16} />
+                Rapports d'Activités
+              </a>
             </li>
           </ul>
         </div>
@@ -127,6 +189,30 @@ const Footer: React.FC = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p>&copy; {currentYear} Avec Sonko 2029 - Tous droits réservés</p>
+          <div className="social-links">
+            <a
+              href="https://www.facebook.com/profile.php?id=61588928924666"
+              className="social-link"
+            >
+              <FaFacebook size={18} />
+            </a>
+
+            <a href="#" className="social-link">
+              <FaTwitter size={18} />
+            </a>
+
+            <a href="#" className="social-link">
+              <FaInstagram size={18} />
+            </a>
+
+            <a href="#" className="social-link">
+              <MessageCircle size={18} />
+            </a>
+
+            <a href="#" className="social-link">
+              <FaYoutube size={18} />
+            </a>
+          </div>
           <div className="footer-bottom-links">
             <a href="#">Mentions Légales</a>
             <a href="#">Politique de Confidentialité</a>
