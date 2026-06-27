@@ -80,7 +80,7 @@ const Hero: React.FC<HeroSectionProps> = () =>
           <div className="hero-buttons">
             <button className="btn-pastef" onClick={onJoinClick}>
               <span className="btn-content">
-                Je Souhaite être un militant Pastef Paris
+                Tu Souhaites être militant Pastef Paris?
               </span>
               <span className="btn-icon">→</span>
             </button>
