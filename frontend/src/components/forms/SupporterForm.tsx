@@ -51,15 +51,7 @@ const SupportForm: React.FC<SupportFormProps> = ({ onClose, onSuccess }) => {
 
             {error && <div className="error-message">{error}</div>}
 
-            {/* <form onSubmit={handleSubmit}> */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-                onSuccess();
-                setTimeout(() => onClose(), 3000);
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
