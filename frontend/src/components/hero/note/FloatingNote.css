@@ -1,0 +1,36 @@
+.floating-note {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 180px;
+
+  background: #ffffff;
+  padding: 12px;
+  font-size: 11px;
+  line-height: 1.2;
+  text-transform: lowercase;
+
+  border-radius: 10px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+  z-index: 10;
+  position: absolute;
+}
+
+/* 🔺 BOSSE POINTUE 30px */
+.floating-note::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -27px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 8px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 30px solid white;
+
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.15));
+}

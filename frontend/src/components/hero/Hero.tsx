@@ -44,6 +44,7 @@
 // frontend/src/components/HeroSection.tsx
 import React from "react";
 import "./Hero.css";
+import FloatingNote from "./note/FloatingNote";
 
 interface HeroSectionProps {
   onJoinClick: () => void;
@@ -60,6 +61,7 @@ const Hero: React.FC<HeroSectionProps> = () =>
 
     return (
       <section className="hero">
+        {/* <FloatingNote /> */}
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <div className="pastef-badge">
@@ -77,7 +79,9 @@ const Hero: React.FC<HeroSectionProps> = () =>
           </p>
           <div className="hero-buttons">
             <button className="btn-pastef" onClick={onJoinClick}>
-              <span className="btn-content">Je Soutiens le PASTEF</span>
+              <span className="btn-content">
+                Je Souhaite être un militant sur Paris
+              </span>
               <span className="btn-icon">→</span>
             </button>
             <button className="btn-outline">Découvrir le Projet</button>
