@@ -1,6 +1,6 @@
 // frontend/src/components/SupportForm.tsx
 import React, { useState } from "react";
-// import { apiService } from "../../services/api";
+import { apiService } from "../../services/api";
 import "./SupporterForm.css";
 
 interface SupportFormProps {
@@ -20,22 +20,22 @@ const SupportForm: React.FC<SupportFormProps> = ({ onClose, onSuccess }) => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setError("");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
-  //   try {
-  //     await apiService.createSupporter(formData);
-  //     setSubmitted(true);
-  //     onSuccess();
-  //     setTimeout(() => onClose(), 3000);
-  //   } catch (err: any) {
-  //     setError(err.response?.data?.error || "Une erreur est survenue");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+    try {
+      await apiService.createSupporter(formData);
+      setSubmitted(true);
+      onSuccess();
+      setTimeout(() => onClose(), 3000);
+    } catch (err: any) {
+      setError(err.response?.data?.error || "Une erreur est survenue");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="modal-overlay" id="support-form">
