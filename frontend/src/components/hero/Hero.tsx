@@ -44,7 +44,7 @@
 // frontend/src/components/HeroSection.tsx
 import React from "react";
 import "./Hero.css";
-import FloatingNote from "./note/FloatingNote";
+// import FloatingNote from "./note/FloatingNote";
 
 interface HeroSectionProps {
   onJoinClick: () => void;
