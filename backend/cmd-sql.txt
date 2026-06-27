@@ -38,3 +38,82 @@ GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
 # Maintenant tester la connexion
 psql -U postgres -h localhost -p 5432
 # Mot de passe: postgres
+
+
+# Tester la connexion avec psql
+psql -U gaye -d sonko_campaign -h localhost -p 5432 -c "SELECT 'Connexion réussie!' as message;"
+
+# Si ça marche, votre backend devrait aussi fonctionner
+curl http://localhost:5000/api/stats
+
+
+# Se connecter avec gaye
+psql -U gaye -d postgres
+
+# Créer l'utilisateur postgres
+CREATE USER postgres WITH SUPERUSER PASSWORD 'postgres';
+ALTER USER postgres WITH LOGIN;
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE sonko_campaign TO postgres;
+
+# Vérifier
+\du
+
+# Quitter
+\q
+
+# Maintenant vous pouvez aussi utiliser postgres
+psql -U postgres -d sonko_campaign -h localhost -p 5432
+# Mot de passe: postgres
+
+
+-- Lister les tables
+\dt
+
+-- Vérifier la table campaign_stats
+SELECT * FROM campaign_stats;
+
+-- Vérifier la structure des tables
+\d supporters
+\d campaign_stats
+
+-----------------------------------------------------------------
+Vous pouvez aussi tout exécuter d'un coup avec ce script :
+
+psql -U gaye -d postgres << EOF
+-- Créer la base
+CREATE DATABASE sonko_campaign;
+
+-- Se connecter et créer les tables
+\c sonko_campaign
+
+CREATE TABLE IF NOT EXISTS supporters (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255),
+    phone_number VARCHAR(20) NOT NULL,
+    contact_preference VARCHAR(10) NOT NULL CHECK (contact_preference IN ('email', 'whatsapp', 'both')),
+    whatsapp_group_joined BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS campaign_stats (
+    id SERIAL PRIMARY KEY,
+    total_supporters INTEGER DEFAULT 0,
+    whatsapp_members INTEGER DEFAULT 0,
+    email_subscribers INTEGER DEFAULT 0,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO campaign_stats (id, total_supporters, whatsapp_members, email_subscribers) 
+VALUES (1, 0, 0, 0)
+ON CONFLICT (id) DO NOTHING;
+
+CREATE INDEX IF NOT EXISTS idx_supporters_created_at ON supporters(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_supporters_phone ON supporters(phone_number);
+CREATE INDEX IF NOT EXISTS idx_supporters_email ON supporters(email);
+
+-- Afficher la confirmation
+SELECT 'Database created successfully!' as status;
+EOF

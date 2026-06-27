@@ -1,6 +1,6 @@
 // frontend/src/components/WhatsAppSection.tsx
 import React, { useState, useEffect } from "react";
-import { apiService } from "../../services/api";
+// import { apiService } from "../../services/api";
 import "./WhatsApp.css";
 import { Users } from "lucide-react";
 

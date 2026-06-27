@@ -17,6 +17,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Router } from "lucide-react";
 import BumpTabs from "./components/tabs/BumpTabs";
 import CurvedTabs from "./components/tabs/CurvedTabs";
+import StatutsParti from "./components/iframes/StatusParti";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -115,6 +116,7 @@ const App: React.FC = () => {
         ></Route>
         <Route path="/other" element={<BumpTabs />} />
         <Route path="/curved" element={<CurvedTabs />} />
+        <Route path="/statuts" element={<StatutsParti />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,3 +9,9 @@ npm install react-countup
 
 # Types pour TypeScript
 npm install --save-dev @types/react-countup
+
+# Créer la structure des dossiers
+mkdir -p src/components
+mkdir -p src/services
+mkdir -p src/types
+mkdir -p src/styles

@@ -122,14 +122,22 @@ const Footer: React.FC = () => {
 
           <ul className="footer-links">
             <li>
-              <a href="#">
+              <a
+                href="/assets/Status-PASTEF-LES-PATRIOTES.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FileText size={16} />
-                Télécharger le Manifeste
+                Statuts du Parti
               </a>
             </li>
 
             <li>
-              <a href="#">
+              <a
+                href="/assets/Reglement-interieur-Pastef-Juillet-2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BookOpen size={16} />
                 Guide du Militant
               </a>
