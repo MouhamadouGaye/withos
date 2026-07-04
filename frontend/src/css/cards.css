@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #101a2e, #0c1424);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e2b45;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #2e4b7a;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.objective {
+  color: #7aa2ff;
+  font-weight: 500;
+}
+
+.block h3 {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #9fb3c8;
+}
+
+ul {
+  padding-left: 18px;
+  text-align: left;
+}
+
+.impact {
+  margin-top: 10px;
+  border-top: 1px solid #1e2b45;
+  padding-top: 10px;
+}

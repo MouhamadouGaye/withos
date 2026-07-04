@@ -70,9 +70,14 @@ const Header: React.FC = () => {
           />
         </div>
         <nav className="nav-menu">
-          <button className="nav-btn" onClick={scrollToForm}>
-            Restons en contact
-          </button>
+          <a
+            className="nav-btn"
+            href="https://app.pastef.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Devenir membre de pastef ?
+          </a>
         </nav>
       </div>
     </header>

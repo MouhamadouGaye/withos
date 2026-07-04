@@ -65,8 +65,8 @@ const Hero: React.FC<HeroSectionProps> = () =>
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <div className="pastef-badge">
-            <span className="pastef-icon">🇸🇳</span>
-            <span className="pastef-text">PASTEF</span>
+            {/* <span className="pastef-icon">🇸🇳</span> */}
+            <img width="100" src="/assets/avecsonko2029-nexus.png" alt="" />
           </div>
           <h1 className="hero-title">
             <span className="title-line">Avec</span>

@@ -1,0 +1,28 @@
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: #a9b4c7;
+  margin-bottom: 30px;
+}
+
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background: #1a2a44;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}

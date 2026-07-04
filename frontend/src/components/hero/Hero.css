@@ -309,6 +309,7 @@
 } */
 
 :root {
+  --dark-white: transparent;
   --green-primary: #3ddc97;
   --green-secondary: #1f8f63;
   --green-dark: #071a12;
@@ -360,7 +361,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--green-soft);
+  background: var(--dark-white);
   backdrop-filter: blur(10px);
   padding: 8px 20px;
   border-radius: 50px;

@@ -18,6 +18,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BumpTabs from "./components/tabs/BumpTabs";
 import CurvedTabs from "./components/tabs/CurvedTabs";
 import StatutsParti from "./components/iframes/StatusParti";
+import Diagnostic from "./pages/diagnostic/Diacnostic";
+import Projects from "./pages/project/Projects";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -117,6 +119,8 @@ const App: React.FC = () => {
         <Route path="/other" element={<BumpTabs />} />
         <Route path="/curved" element={<CurvedTabs />} />
         <Route path="/statuts" element={<StatutsParti />} />
+        <Route path="/diagnostic" element={<Diagnostic />} />
+        <Route path="/programme" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   );

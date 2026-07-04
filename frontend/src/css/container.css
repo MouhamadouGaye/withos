@@ -1,0 +1,78 @@
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  box-sizing: border-box;
+}
+
+/* Variante “section large” */
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+/* Header de section */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #eaf1ff;
+}
+
+.section-subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #a9b4c7;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Layout grid global */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 28px 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 14px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+}
