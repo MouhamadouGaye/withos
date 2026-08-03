@@ -20,6 +20,8 @@ import CurvedTabs from "./components/tabs/CurvedTabs";
 import StatutsParti from "./components/iframes/StatusParti";
 import Diagnostic from "./pages/diagnostic/Diacnostic";
 import Projects from "./pages/project/Projects";
+import CommissionHome from "./pages/commissions/CommissionHome";
+import CommissionEconomy from "./pages/commissions/economie/CommissionEconomy";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -121,6 +123,30 @@ const App: React.FC = () => {
         <Route path="/statuts" element={<StatutsParti />} />
         <Route path="/diagnostic" element={<Diagnostic />} />
         <Route path="/programme" element={<Projects />} />
+
+        <Route path="/commissions" element={<CommissionHome />} />
+
+        <Route path="/commissions/economie" element={<CommissionEconomy />} />
+        {/* 
+        <Route
+          path="/commissions/economie/publications"
+          element={<CommissionPublications />}
+        />
+
+        <Route
+          path="/commissions/economie/membres"
+          element={<CommissionMembers />}
+        />
+
+        <Route
+          path="/commissions/economie/rapports"
+          element={<CommissionReports />}
+        />
+
+        <Route
+          path="/commissions/economie/dashboard"
+          element={<CommissionDashboard />}
+        /> */}
       </Routes>
     </BrowserRouter>
   );
