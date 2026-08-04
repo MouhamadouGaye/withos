@@ -1,0 +1,129 @@
+/* ==================================================
+   COMMISSION NAVBAR
+================================================== */
+
+.commission-navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 40px;
+
+  background: rgba(7, 26, 18, 0.75);
+
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(61, 220, 151, 0.15);
+}
+
+/* LOGO */
+
+.commission-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 0.9;
+
+  font-weight: 800;
+}
+
+.commission-logo span {
+  font-size: 1.8rem;
+
+  color: #3ddc97;
+}
+
+.commission-logo strong {
+  font-size: 0.8rem;
+
+  letter-spacing: 3px;
+}
+
+/* MENU */
+
+.commission-navbar nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.commission-navbar nav a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  transition: 0.3s;
+
+  font-size: 0.9rem;
+}
+
+.commission-navbar nav a svg {
+  color: #3ddc97;
+}
+
+.commission-navbar nav a:hover {
+  background: rgba(61, 220, 151, 0.1);
+
+  color: white;
+}
+
+.commission-navbar nav a.active {
+  background: linear-gradient(135deg, #3ddc97, #1f8f63);
+
+  color: white;
+}
+
+/* CONTENT */
+
+.commission-content {
+  min-height: 100vh;
+}
+
+@media (max-width: 1100px) {
+  .commission-navbar {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .commission-navbar nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .commission-navbar {
+    padding: 20px;
+  }
+
+  .commission-navbar nav a {
+    font-size: 0.75rem;
+
+    padding: 10px 12px;
+  }
+}

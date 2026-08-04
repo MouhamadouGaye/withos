@@ -1,0 +1,295 @@
+.members-page {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.members-hero {
+  position: relative;
+
+  min-height: 70vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 100px 25px;
+}
+
+.members-glow {
+  position: absolute;
+
+  width: 600px;
+
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(61, 220, 151, 0.22),
+    transparent 65%
+  );
+
+  filter: blur(50px);
+}
+
+.members-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  text-align: center;
+}
+
+.members-content span {
+  color: #3ddc97;
+
+  letter-spacing: 3px;
+
+  font-size: 0.8rem;
+}
+
+.members-content h1 {
+  margin-top: 25px;
+
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.members-content strong {
+  background: linear-gradient(135deg, #65f5b6, #3ddc97, #1f8f63);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+.members-content p {
+  margin: 35px auto;
+
+  max-width: 700px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+ SEARCH
+========================= */
+
+.members-search {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 30px 25px;
+}
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 25px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(61, 220, 151, 0.2);
+}
+
+.search-box svg {
+  color: #3ddc97;
+}
+
+.search-box input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: none;
+
+  color: white;
+
+  font-size: 1rem;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+ MEMBERS
+========================= */
+
+.members-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 70px 25px;
+}
+
+.members-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+}
+
+.member-card {
+  padding: 40px 30px;
+
+  text-align: center;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(61, 220, 151, 0.15);
+
+  transition: 0.35s;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #3ddc97;
+
+  background: rgba(61, 220, 151, 0.06);
+}
+
+.member-icon {
+  width: 80px;
+
+  height: 80px;
+
+  margin: auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 25px;
+
+  font-size: 2rem;
+
+  color: #3ddc97;
+
+  background: rgba(61, 220, 151, 0.1);
+
+  margin-bottom: 25px;
+}
+
+.member-card h2 {
+  font-size: 1.3rem;
+}
+
+.member-card h3 {
+  color: #3ddc97;
+
+  margin: 15px 0;
+
+  font-size: 1rem;
+}
+
+.member-card p {
+  color: rgba(255, 255, 255, 0.7);
+
+  line-height: 1.7;
+}
+
+.member-card button {
+  margin-top: 25px;
+
+  padding: 12px 25px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(61, 220, 151, 0.3);
+
+  background: none;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+/* =========================
+ EXPERTISE
+========================= */
+
+.expertise-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 80px 25px;
+}
+
+.expertise-section h2 {
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 50px;
+}
+
+.expertise-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.expertise-grid div {
+  padding: 25px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  background: rgba(61, 220, 151, 0.06);
+
+  border: 1px solid rgba(61, 220, 151, 0.15);
+
+  transition: 0.3s;
+}
+
+.expertise-grid div:hover {
+  transform: translateY(-5px);
+
+  border-color: #3ddc97;
+}
+
+@media (max-width: 768px) {
+  .members-content h1 {
+    font-size: 3rem;
+  }
+
+  .member-card {
+    padding: 30px 20px;
+  }
+}
