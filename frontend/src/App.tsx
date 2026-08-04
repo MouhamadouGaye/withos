@@ -130,14 +130,14 @@ const App: React.FC = () => {
 
         <Route path="/commissions" element={<CommissionHome />} />
 
-        <Route path="/commissions/economie" element={<CommissionEconomy />} />
+        <Route path="/commissions/efpb" element={<CommissionEconomy />} />
         <Route
-          path="/commissions/economie/publications"
+          path="/commissions/efpb/publications"
           element={<CommissionMembers />}
         />
 
         <Route
-          path="/commissions/economie/publications"
+          path="/commissions/efpb/publications"
           element={<CommissionPublications />}
         />
         {/* 
@@ -150,11 +150,11 @@ const App: React.FC = () => {
   
 */}
         <Route
-          path="/commissions/economie/rapports"
+          path="/commissions/efpb/rapports"
           element={<CommissionReports />}
         />
         <Route
-          path="/commissions/economie/dashboard"
+          path="/commissions/efpb/dashboard"
           element={<CommissionDashboard />}
         />
       </Routes>

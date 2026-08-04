@@ -122,10 +122,7 @@ const Header: React.FC = () => {
               </div>
 
               <div className="mega-grid">
-                <NavLink
-                  to="/commissions/economie/dashboard"
-                  className="mega-card"
-                >
+                <NavLink to="/commissions/efpb/dashboard" className="mega-card">
                   <LayoutDashboard />
 
                   <div>
@@ -135,10 +132,7 @@ const Header: React.FC = () => {
                   </div>
                 </NavLink>
 
-                <NavLink
-                  to="/commissions/economie/membres"
-                  className="mega-card"
-                >
+                <NavLink to="/commissions/efpb/membres" className="mega-card">
                   <Users />
 
                   <div>
@@ -149,7 +143,7 @@ const Header: React.FC = () => {
                 </NavLink>
 
                 <NavLink
-                  to="/commissions/economie/publications"
+                  to="/commissions/efpb/publications"
                   className="mega-card"
                 >
                   <BookOpen />
@@ -161,10 +155,7 @@ const Header: React.FC = () => {
                   </div>
                 </NavLink>
 
-                <NavLink
-                  to="/commissions/economie/rapports"
-                  className="mega-card"
-                >
+                <NavLink to="/commissions/efpb/rapports" className="mega-card">
                   <FileText />
 
                   <div>
@@ -174,10 +165,7 @@ const Header: React.FC = () => {
                   </div>
                 </NavLink>
 
-                <NavLink
-                  to="/commissions/economie/rejoindre"
-                  className="mega-card"
-                >
+                <NavLink to="/commissions/efpb/rejoindre" className="mega-card">
                   <UserPlus />
 
                   <div>
@@ -208,19 +196,17 @@ const Header: React.FC = () => {
 
           <div className="mobile-title">Commissions</div>
 
-          <NavLink to="/commissions/economie">🏠 Accueil commission</NavLink>
+          <NavLink to="/commissions/efpb">🏠 Accueil commission</NavLink>
 
-          <NavLink to="/commissions/economie/dashboard">📊 Dashboard</NavLink>
+          <NavLink to="/commissions/efpb/dashboard">📊 Dashboard</NavLink>
 
-          <NavLink to="/commissions/economie/membres">👥 Membres</NavLink>
+          <NavLink to="/commissions/efpb/membres">👥 Membres</NavLink>
 
-          <NavLink to="/commissions/economie/publications">
-            📚 Publications
-          </NavLink>
+          <NavLink to="/commissions/efpb/publications">📚 Publications</NavLink>
 
-          <NavLink to="/commissions/economie/rapports">📄 Rapports</NavLink>
+          <NavLink to="/commissions/efpb/rapports">📄 Rapports</NavLink>
 
-          <NavLink to="/commissions/economie/rejoindre">🤝 Rejoindre</NavLink>
+          <NavLink to="/commissions/efpb/rejoindre">🤝 Rejoindre</NavLink>
         </div>
 
         <a
