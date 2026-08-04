@@ -25,7 +25,7 @@ const CommissionDashboard: React.FC = () => {
 
     {
       icon: <FaCoins />,
-      value: "3,1%",
+      value: "2,1%",
       label: "Inflation",
       variation: "-0,4%",
       positive: true,
@@ -33,7 +33,7 @@ const CommissionDashboard: React.FC = () => {
 
     {
       icon: <FaUniversity />,
-      value: "72%",
+      value: "119%",
       label: "Dette publique / PIB",
       variation: "+2,1%",
       positive: false,
@@ -54,7 +54,7 @@ const CommissionDashboard: React.FC = () => {
 
       category: "Budget",
 
-      date: "Juin 2026",
+      date: "Dec 2026",
     },
 
     {
@@ -62,7 +62,7 @@ const CommissionDashboard: React.FC = () => {
 
       category: "Croissance",
 
-      date: "Mai 2026",
+      date: "oct 2026",
     },
 
     {
@@ -70,7 +70,7 @@ const CommissionDashboard: React.FC = () => {
 
       category: "Fiscalité",
 
-      date: "Avril 2026",
+      date: "Août 2026",
     },
   ];
 

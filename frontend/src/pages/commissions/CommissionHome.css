@@ -169,6 +169,13 @@
 
   transition: 0.35s ease;
 }
+.button-link {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: inherit;
+}
 
 .cyber-button:hover {
   transform: translateY(-5px);
