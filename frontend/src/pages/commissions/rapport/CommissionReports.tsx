@@ -22,6 +22,8 @@ interface Report {
   description: string;
 
   size: string;
+
+  file?: string;
 }
 
 const CommissionReports: React.FC = () => {
@@ -43,6 +45,7 @@ const CommissionReports: React.FC = () => {
         "Synthèse des analyses économiques, recommandations et perspectives nationales.",
 
       size: "12 MB",
+      file: "/documents/rapport-economique-2026.pdf",
     },
 
     {
@@ -58,6 +61,7 @@ const CommissionReports: React.FC = () => {
         "Analyse des recettes, dépenses publiques et trajectoire budgétaire.",
 
       size: "8 MB",
+      file: "/documents/dossier-20037403.pdf",
     },
 
     {
@@ -73,6 +77,7 @@ const CommissionReports: React.FC = () => {
         "Étude sur la modernisation fiscale et son impact sur l'économie.",
 
       size: "15 MB",
+      file: "/documents/dossier-20037403.pdf",
     },
 
     {
@@ -88,6 +93,7 @@ const CommissionReports: React.FC = () => {
         "Analyse des politiques publiques favorisant la création d'emplois.",
 
       size: "10 MB",
+      file: "/documents/dossier-20037403.pdf",
     },
   ];
 
@@ -183,7 +189,7 @@ const CommissionReports: React.FC = () => {
 
                 <p>{report.description}</p>
 
-                <button>
+                <button onClick={() => window.open(report.file, "_blank")}>
                   <FaDownload />
                   Télécharger
                 </button>
