@@ -150,7 +150,7 @@ const App: React.FC = () => {
   
 */}
         <Route
-          path="/commissions/economie/reports"
+          path="/commissions/economie/rapports"
           element={<CommissionReports />}
         />
         <Route

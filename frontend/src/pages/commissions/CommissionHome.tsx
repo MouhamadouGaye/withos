@@ -1,5 +1,6 @@
 import React from "react";
 import "./CommissionHome.css";
+import { Link } from "react-router-dom";
 
 const CommissionHome: React.FC = () => {
   return (
@@ -25,11 +26,18 @@ const CommissionHome: React.FC = () => {
 
           <div className="hero-actions">
             <button className="cyber-button">
-              <span className="button-glitch"></span>
-              Découvrir la commission
+              <Link to="/commissions/economie/dashboard">
+                <span className="button-glitch"></span>
+                Découvrir la commission
+              </Link>
             </button>
 
-            <button className="outline-button">Nos publications</button>
+            <Link
+              to="/commissions/economie/publications"
+              className="outline-button"
+            >
+              Nos publications
+            </Link>
           </div>
         </div>
       </section>
