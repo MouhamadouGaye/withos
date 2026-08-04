@@ -119,7 +119,7 @@
     font-size: 0.8rem;
   }
 } */
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -128,7 +128,6 @@
   transition: all 0.3s ease;
   padding: 0.8rem 0;
 
-  /* important pour gérer correctement ::before et ::after */
   isolation: isolate;
 }
 
@@ -139,7 +138,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* IMAGE DE FOND */
 .header.scrolled::before {
   content: "";
   position: absolute;
@@ -153,7 +151,6 @@
   pointer-events: none;
 }
 
-/* FILTRE COLORÉ PAR-DESSUS L'IMAGE */
 .header.scrolled::after {
   content: "";
   position: absolute;
@@ -163,7 +160,6 @@
   pointer-events: none;
 }
 
-/* CONTENU HEADER */
 .header-container {
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -175,7 +171,6 @@
   z-index: 2;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -204,7 +199,6 @@
   letter-spacing: 1px;
 }
 
-/* BOUTON NAV */
 .nav-btn {
   background: linear-gradient(135deg, #8b0000, #006400);
   color: white;
@@ -225,9 +219,6 @@
   box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
 }
 
-/* ===================== */
-/* RESPONSIVE */
-/* ===================== */
 
 @media (max-width: 768px) {
   .header-container {
@@ -258,5 +249,707 @@
   .nav-btn {
     padding: 0.4rem 1rem;
     font-size: 0.8rem;
+  }
+} */
+/* =========================================================
+   HEADER 2027 - BASE SYSTEM
+========================================================= */
+
+.header-2027 {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2000;
+
+  padding: 18px 0;
+
+  transition:
+    background 0.45s ease,
+    padding 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.header-2027::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(7, 26, 18, 0.55), transparent);
+
+  opacity: 0.6;
+
+  pointer-events: none;
+}
+
+.header-scrolled {
+  padding: 12px 0;
+
+  background: rgba(7, 26, 18, 0.72);
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.header-inner {
+  width: min(1400px, 92%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.logo-image {
+  width: 82px;
+
+  height: auto;
+
+  transition: 0.4s ease;
+}
+
+.logo-link:hover .logo-image {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.logo-title {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.logo-title span {
+  font-size: 1.1rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(135deg, #65f5b6, #3ddc97);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+.logo-title small {
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+.desktop-menu > a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.desktop-menu > a::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -8px;
+
+  left: 0;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #3ddc97;
+
+  transition: 0.35s ease;
+}
+
+.desktop-menu > a:hover {
+  color: white;
+}
+
+.desktop-menu > a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   COMMISSIONS BUTTON
+========================================================= */
+
+.mega-wrapper {
+  position: relative;
+}
+
+.mega-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+
+  background: none;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.mega-button svg {
+  transition: 0.35s ease;
+}
+
+.mega-button svg.rotate {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   MEMBER BUTTON
+========================================================= */
+
+.member-button {
+  position: relative;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 700;
+
+  padding: 14px 30px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #3ddc97, #1f8f63);
+
+  box-shadow: 0 10px 30px rgba(61, 220, 151, 0.25);
+
+  transition: 0.35s ease;
+}
+
+.member-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: translateX(-120%);
+
+  transition: 0.6s ease;
+}
+
+.member-button:hover::before {
+  transform: translateX(120%);
+}
+
+.member-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 45px rgba(61, 220, 151, 0.45);
+}
+
+/* =========================================================
+   MOBILE PREPARATION
+========================================================= */
+
+@media (max-width: 1100px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .logo-title {
+    display: none;
+  }
+
+  .header-inner {
+    width: 94%;
+  }
+}
+
+/* =========================================================
+   MEGA MENU 2027
+========================================================= */
+
+.mega-menu {
+  position: absolute;
+
+  top: 20px;
+
+  left: -60%;
+
+  transform: translateX(-50%) translateY(20px);
+
+  /* width: 900px; */
+  width: min(900px, 90vw);
+
+  padding: 35px;
+
+  border-radius: 30px;
+
+  background: rgba(13, 36, 26, 0.88);
+
+  border: 1px solid rgba(61, 220, 151, 0.18);
+
+  backdrop-filter: blur(25px);
+
+  -webkit-backdrop-filter: blur(25px);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+
+  display: grid;
+
+  grid-template-columns: 280px 1fr;
+
+  gap: 35px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s;
+}
+
+.mega-menu.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================================
+   MEGA LEFT PRESENTATION
+========================================================= */
+
+.mega-left {
+  padding-right: 25px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mega-badge {
+  display: inline-flex;
+
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  background: rgba(61, 220, 151, 0.12);
+
+  border: 1px solid rgba(61, 220, 151, 0.25);
+
+  color: #65f5b6;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+.mega-left h2 {
+  font-size: 1.7rem;
+
+  line-height: 1.25;
+
+  margin-bottom: 18px;
+}
+
+.mega-left p {
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.discover-link {
+  margin-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: #3ddc97;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.discover-link:hover {
+  gap: 16px;
+}
+
+/* =========================================================
+   COMMISSION CARDS
+========================================================= */
+
+.mega-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  overflow: hidden;
+
+  gap: 15px;
+}
+
+.mega-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  border-radius: 22px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(61, 220, 151, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mega-card svg {
+  min-width: 25px;
+
+  color: #3ddc97;
+
+  margin-top: 4px;
+}
+
+.mega-card h4 {
+  margin-bottom: 5px;
+
+  font-size: 1rem;
+}
+
+.mega-card p {
+  font-size: 0.78rem;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  line-height: 1.4;
+}
+
+.mega-card:hover {
+  transform: translateY(-6px);
+
+  background: rgba(61, 220, 151, 0.1);
+
+  border-color: rgba(61, 220, 151, 0.5);
+}
+
+/* =========================================================
+   LIGHT EFFECT
+========================================================= */
+
+.mega-menu::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  top: -120px;
+
+  right: -80px;
+
+  background: radial-gradient(
+    circle,
+    rgba(61, 220, 151, 0.25),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   MOBILE VERSION
+========================================================= */
+
+@media (max-width: 1100px) {
+  .mega-wrapper {
+    display: none;
+  }
+
+  .member-button {
+    padding: 12px 22px;
+
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-2027 {
+    padding: 12px 0;
+  }
+
+  .logo-image {
+    width: 60px;
+  }
+
+  .member-button {
+    padding: 10px 18px;
+
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================================
+   EXTRA PREMIUM ANIMATION
+========================================================= */
+
+@keyframes menuReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.mega-menu.show {
+  animation: menuReveal 0.35s ease forwards;
+}
+
+/* =========================================================
+   ACTIVE ROUTE
+========================================================= */
+
+.desktop-menu a.active {
+  color: #65f5b6;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.mega-button:focus-visible,
+.member-button:focus-visible,
+.mega-card:focus-visible {
+  outline: 2px solid #3ddc97;
+
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger-btn {
+  display: none;
+
+  border: none;
+
+  background: rgba(61, 220, 151, 0.12);
+
+  color: white;
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.hamburger-btn:hover {
+  background: rgba(61, 220, 151, 0.25);
+}
+
+/* =========================================================
+ MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  position: absolute;
+
+  top: 85px;
+
+  left: 3%;
+
+  right: 3%;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  background: rgba(13, 36, 26, 0.95);
+
+  border: 1px solid rgba(61, 220, 151, 0.2);
+
+  backdrop-filter: blur(25px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-20px);
+
+  transition: 0.35s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  padding: 12px;
+
+  border-radius: 15px;
+}
+
+.mobile-menu a:hover {
+  background: rgba(61, 220, 151, 0.12);
+}
+
+.mobile-title {
+  color: #3ddc97;
+
+  font-weight: 800;
+
+  font-size: 1.1rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding-bottom: 10px;
+}
+
+/* =========================================================
+ RESPONSIVE FIX
+========================================================= */
+
+@media (max-width: 1100px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .member-button {
+    display: none;
   }
 }
