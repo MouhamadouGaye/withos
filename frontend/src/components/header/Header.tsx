@@ -52,10 +52,10 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToForm = () => {
-    const formElement = document.getElementById("whatsapp-card");
-    formElement?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToForm = () => {
+  //   const formElement = document.getElementById("whatsapp-card");
+  //   formElement?.scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
