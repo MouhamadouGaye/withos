@@ -107,6 +107,15 @@ const App: React.FC = () => {
                       <div className="stat-glow"></div>
                     </div>
                   </TiltCard>
+                  <TiltCard>
+                    <div className="stat-card-2027">
+                      <div className="stat-value">
+                        {stats.email_subscribers.toLocaleString()}+
+                      </div>
+                      <div className="stat-label">Email</div>
+                      <div className="stat-glow"></div>
+                    </div>
+                  </TiltCard>
                 </div>
               </div>
 

@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <BookOpen size={16} />
-                Le Programme
+                Les Rapports
               </a>
             </li>
 
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <BarChart3 size={16} />
-                Rapports d'Activités
+                Finances Publiques
               </a>
             </li>
           </ul>
