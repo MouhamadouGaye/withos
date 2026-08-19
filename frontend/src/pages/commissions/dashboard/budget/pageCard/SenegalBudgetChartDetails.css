@@ -44,7 +44,6 @@
   width: min(1200px, calc(100% - 40px));
 
   margin: 0 auto 35px;
-  margin-top: 20px;
 
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

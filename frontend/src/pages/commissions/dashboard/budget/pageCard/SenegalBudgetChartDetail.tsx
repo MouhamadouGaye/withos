@@ -225,6 +225,7 @@ import {
 } from "../../../../../data/SenegalBudgetCharts";
 
 import "./SenegalBudgetChartDetails.css";
+import Footer from "../../../../../components/footer/Footer";
 
 ChartJS.register(
   CategoryScale,
@@ -289,140 +290,143 @@ export default function SenegalBudgetChartDetail() {
   /* ======================================================= */
 
   return (
-    <main className="chart-detail-page">
-      {/* HEADER */}
+    <div>
+      <main className="chart-detail-page">
+        {/* HEADER */}
 
-      <header className="chart-detail-header">
-        <Link to="/finances-publiques" className="back-button">
-          ← Retour aux finances publiques
-        </Link>
+        <header className="chart-detail-header">
+          <Link to="/finances-publiques" className="back-button">
+            ← Retour aux finances publiques
+          </Link>
 
-        <span className="dashboard-eyebrow">
-          RÉPUBLIQUE DU SÉNÉGAL · FINANCES PUBLIQUES
-        </span>
+          <span className="dashboard-eyebrow">
+            RÉPUBLIQUE DU SÉNÉGAL · FINANCES PUBLIQUES
+          </span>
 
-        <h1>
-          <span className="gradient-text">{config.title}</span>
-        </h1>
+          <h1>
+            <span className="gradient-text">{config.title}</span>
+          </h1>
 
-        <p>{config.description}</p>
-      </header>
+          <p>{config.description}</p>
+        </header>
 
-      {/* ================================================= */}
-      {/* ANNÉES */}
-      {/* ================================================= */}
+        {/* ================================================= */}
+        {/* ANNÉES */}
+        {/* ================================================= */}
 
-      <section className="detail-year-selector">
-        <span>ANNÉE</span>
+        <section className="detail-year-selector">
+          <span>ANNÉE</span>
 
-        <div>
-          {years.map((year) => (
-            <button
-              key={year}
-              type="button"
-              className={
-                selectedYear === year ? "year-button active" : "year-button"
-              }
-              onClick={() => setSelectedYear(year)}
-              aria-pressed={selectedYear === year}
-            >
-              {year}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* ================================================= */}
-      {/* KPI */}
-      {/* ================================================= */}
-
-      <section className="detail-kpis">
-        <DetailKpi label="Agents" value={formatNumber(data.stats.agents)} />
-
-        <DetailKpi
-          label="Masse salariale"
-          value={`${formatNumber(data.stats.payroll)} Md`}
-        />
-
-        <DetailKpi
-          label="Budget"
-          value={`${formatNumber(data.stats.budget)} Md`}
-        />
-
-        <DetailKpi
-          label="Dette"
-          value={`${formatNumber(data.stats.debt)} Md`}
-        />
-      </section>
-
-      {/* ================================================= */}
-      {/* GRAND GRAPHIQUE */}
-      {/* ================================================= */}
-
-      <section className="detail-chart-card">
-        <div className="detail-chart-header">
           <div>
-            <span className="chart-detail-year">DONNÉES {selectedYear}</span>
+            {years.map((year) => (
+              <button
+                key={year}
+                type="button"
+                className={
+                  selectedYear === year ? "year-button active" : "year-button"
+                }
+                onClick={() => setSelectedYear(year)}
+                aria-pressed={selectedYear === year}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+        </section>
 
-            <h2>{config.title}</h2>
+        {/* ================================================= */}
+        {/* KPI */}
+        {/* ================================================= */}
 
-            <p>{config.description}</p>
+        <section className="detail-kpis">
+          <DetailKpi label="Agents" value={formatNumber(data.stats.agents)} />
+
+          <DetailKpi
+            label="Masse salariale"
+            value={`${formatNumber(data.stats.payroll)} Md`}
+          />
+
+          <DetailKpi
+            label="Budget"
+            value={`${formatNumber(data.stats.budget)} Md`}
+          />
+
+          <DetailKpi
+            label="Dette"
+            value={`${formatNumber(data.stats.debt)} Md`}
+          />
+        </section>
+
+        {/* ================================================= */}
+        {/* GRAND GRAPHIQUE */}
+        {/* ================================================= */}
+
+        <section className="detail-chart-card">
+          <div className="detail-chart-header">
+            <div>
+              <span className="chart-detail-year">DONNÉES {selectedYear}</span>
+
+              <h2>{config.title}</h2>
+
+              <p>{config.description}</p>
+            </div>
+
+            <span className="chart-dot" />
           </div>
 
-          <span className="chart-dot" />
-        </div>
+          <div className="detail-chart-container">
+            {chartSlug === "masse-salariale-secteur" &&
+              (data.payrollBySector.length > 0 ? (
+                <Doughnut
+                  data={buildPayrollSectorChart(data)}
+                  options={doughnutOptions}
+                />
+              ) : (
+                <EmptyChart year={selectedYear} />
+              ))}
 
-        <div className="detail-chart-container">
-          {chartSlug === "masse-salariale-secteur" &&
-            (data.payrollBySector.length > 0 ? (
+            {chartSlug === "effectifs-ministere" &&
+              (data.employmentByMinistry.length > 0 ? (
+                <Bar
+                  data={buildEmploymentChart(data)}
+                  options={horizontalBarOptions}
+                />
+              ) : (
+                <EmptyChart year={selectedYear} />
+              ))}
+
+            {chartSlug === "evolution-masse-salariale" && (
+              <Line data={buildPayrollEvolutionChart()} options={lineOptions} />
+            )}
+
+            {chartSlug === "structure-depenses" &&
+              (data.expenses.length > 0 ? (
+                <Bar data={buildExpenseChart(data)} options={barOptions} />
+              ) : (
+                <EmptyChart year={selectedYear} />
+              ))}
+
+            {chartSlug === "structure-agents" && (
               <Doughnut
-                data={buildPayrollSectorChart(data)}
+                data={buildPersonnelChart(data)}
                 options={doughnutOptions}
               />
-            ) : (
-              <EmptyChart year={selectedYear} />
-            ))}
+            )}
 
-          {chartSlug === "effectifs-ministere" &&
-            (data.employmentByMinistry.length > 0 ? (
-              <Bar
-                data={buildEmploymentChart(data)}
-                options={horizontalBarOptions}
-              />
-            ) : (
-              <EmptyChart year={selectedYear} />
-            ))}
-
-          {chartSlug === "evolution-masse-salariale" && (
-            <Line data={buildPayrollEvolutionChart()} options={lineOptions} />
-          )}
-
-          {chartSlug === "structure-depenses" &&
-            (data.expenses.length > 0 ? (
-              <Bar data={buildExpenseChart(data)} options={barOptions} />
-            ) : (
-              <EmptyChart year={selectedYear} />
-            ))}
-
-          {chartSlug === "structure-agents" && (
-            <Doughnut
-              data={buildPersonnelChart(data)}
-              options={doughnutOptions}
-            />
-          )}
-
-          {chartSlug === "poids-secteurs" &&
-            (data.payrollBySector.length > 0 ? (
-              <PolarArea
-                data={buildSectorPolarChart(data)}
-                options={polarOptions}
-              />
-            ) : (
-              <EmptyChart year={selectedYear} />
-            ))}
-        </div>
-      </section>
-    </main>
+            {chartSlug === "poids-secteurs" &&
+              (data.payrollBySector.length > 0 ? (
+                <PolarArea
+                  data={buildSectorPolarChart(data)}
+                  options={polarOptions}
+                />
+              ) : (
+                <EmptyChart year={selectedYear} />
+              ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
 interface DetailKpiProps {
@@ -439,6 +443,7 @@ function DetailKpi({ label, value }: DetailKpiProps) {
     </article>
   );
 }
+
 function EmptyChart({ year }: { year: number }) {
   return (
     <div className="empty-chart">
