@@ -1,6 +1,6 @@
 // src/utils/SenegalBudgetCharts.ts
 
-import type { ChartData, ChartOptions } from "chart.js";
+import type { ChartOptions } from "chart.js";
 
 import { senegalBudgetData, type YearData } from "../data/SenegalBudgetData";
 
