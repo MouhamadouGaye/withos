@@ -36,3 +36,233 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* ========================================================= */
+/* KPI DETAIL */
+/* ========================================================= */
+
+.detail-kpis {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto 35px;
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* ========================================================= */
+/* KPI CARD */
+/* ========================================================= */
+
+.detail-kpi {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 28px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(61, 220, 151, 0.08),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border: 1px solid rgba(61, 220, 151, 0.22);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+/* ========================================================= */
+/* HOVER */
+/* ========================================================= */
+
+.detail-kpi:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(61, 220, 151, 0.48);
+
+  background: linear-gradient(
+    135deg,
+    rgba(61, 220, 151, 0.13),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28),
+    0 0 25px rgba(61, 220, 151, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================================= */
+/* KPI LABEL */
+/* ========================================================= */
+
+.detail-kpi-label {
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* ========================================================= */
+/* KPI VALUE */
+/* ========================================================= */
+
+.detail-kpi-value {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  background: linear-gradient(135deg, #65f5b6, #3ddc97, #1f8f63);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  filter: drop-shadow(0 0 10px rgba(61, 220, 151, 0.15));
+
+  transition: filter 0.3s ease;
+}
+
+.detail-kpi:hover .detail-kpi-value {
+  filter: drop-shadow(0 0 16px rgba(61, 220, 151, 0.35));
+}
+
+/* ========================================================= */
+/* PETIT INDICATEUR VERT */
+/* ========================================================= */
+
+.detail-kpi::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 3px;
+
+  background: linear-gradient(90deg, #3ddc97, transparent);
+
+  box-shadow: 0 0 12px rgba(61, 220, 151, 0.5);
+}
+
+/* ========================================================= */
+/* GLOW */
+/* ========================================================= */
+
+.detail-kpi::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -60px;
+  bottom: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(61, 220, 151, 0.09);
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.detail-kpi:hover::after {
+  transform: scale(1.4);
+
+  opacity: 0.9;
+}
+
+/* ========================================================= */
+/* RESPONSIVE — TABLET */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+  .detail-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .detail-kpi {
+    min-height: 130px;
+
+    padding: 24px 20px;
+  }
+
+  .detail-kpi-value {
+    font-size: 2rem;
+  }
+}
+
+/* ========================================================= */
+/* RESPONSIVE — MOBILE */
+/* ========================================================= */
+
+@media (max-width: 560px) {
+  .detail-kpis {
+    width: min(100% - 28px, 500px);
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+  }
+
+  .detail-kpi {
+    min-height: 110px;
+
+    padding: 22px 20px;
+
+    border-radius: 17px;
+  }
+
+  .detail-kpi-label {
+    font-size: 0.72rem;
+  }
+
+  .detail-kpi-value {
+    font-size: 1.8rem;
+  }
+}

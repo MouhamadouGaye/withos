@@ -86,7 +86,11 @@ const Footer: React.FC = () => {
             </li>
 
             <li>
-              <a href="#">
+              <a
+                href=" https://www.avecsonko.org/commissions/efpb/rapports"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BookOpen size={16} />
                 Le Programme
               </a>
@@ -158,7 +162,11 @@ const Footer: React.FC = () => {
             </li>
 
             <li>
-              <a href="#">
+              <a
+                href="https://www.avecsonko.org/finances-publiques"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BarChart3 size={16} />
                 Rapports d'Activités
               </a>
