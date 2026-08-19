@@ -27,6 +27,7 @@ import CommissionMembers from "./pages/commissions/members/CommissionMembers";
 import CommissionPublications from "./pages/commissions/publication/CommissionPublications";
 import CommissionReports from "./pages/commissions/rapport/CommissionReports";
 import SenegalBudgetDashboard from "./pages/commissions/dashboard/budget/SenegalBudgetDashboard";
+import SenegalBudgetChartDetail from "./pages/commissions/dashboard/budget/pageCard/SenegalBudgetChartDetail";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -158,7 +159,14 @@ const App: React.FC = () => {
           path="/commissions/efpb/dashboard"
           element={<CommissionDashboard />}
         />
-        <Route path="/dashboard" element={<SenegalBudgetDashboard />} />
+        <Route
+          path="/finances-publiques"
+          element={<SenegalBudgetDashboard />}
+        />
+        <Route
+          path="/finances-publiques/graphique/:chartSlug"
+          element={<SenegalBudgetChartDetail />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,38 @@
+.chart-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.chart-card-link .chart-card {
+  cursor: pointer;
+}
+
+.chart-card-link .chart-card::after {
+  content: "↗";
+  position: absolute;
+  top: 20px;
+  right: 22px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--green-border);
+  border-radius: 50%;
+
+  color: var(--green-primary);
+
+  opacity: 0;
+  transform: translateY(5px);
+
+  transition: 0.3s ease;
+}
+
+.chart-card-link:hover .chart-card::after {
+  opacity: 1;
+  transform: translateY(0);
+}
