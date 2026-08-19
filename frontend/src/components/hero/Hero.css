@@ -368,14 +368,21 @@
   margin-bottom: 30px;
   border: 1px solid var(--green-border);
   animation: pulse 2s ease-in-out infinite;
+  position: relative;
 }
 
-.pastef-text {
+/* .pastef-text {
   color: var(--green-primary);
   font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-}
+  letter-spacing: 1px;
+  font-size: 1.9rem;
+  left: 50px;
+  bottom: -17px;
+  position: absolute;
+  z-index: -1;
+  font-size: 11px;
+  color: rgba(190, 189, 189, 0.166);
+} */
 
 /* TITRES */
 .hero-title {

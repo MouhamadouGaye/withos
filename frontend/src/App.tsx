@@ -26,6 +26,7 @@ import CommissionDashboard from "./pages/commissions/dashboard/CommissionDashboa
 import CommissionMembers from "./pages/commissions/members/CommissionMembers";
 import CommissionPublications from "./pages/commissions/publication/CommissionPublications";
 import CommissionReports from "./pages/commissions/rapport/CommissionReports";
+import SenegalBudgetDashboard from "./pages/commissions/dashboard/budget/SenegalBudgetDashboard";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -157,6 +158,7 @@ const App: React.FC = () => {
           path="/commissions/efpb/dashboard"
           element={<CommissionDashboard />}
         />
+        <Route path="/dashboard" element={<SenegalBudgetDashboard />} />
       </Routes>
     </BrowserRouter>
   );
