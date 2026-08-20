@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
 
           <ul className="footer-links">
             <li>
-              <a href="#">
+              <a href="https://www.avecsonko.org">
                 <Home size={16} />
                 Accueil
               </a>
@@ -97,7 +97,11 @@ const Footer: React.FC = () => {
             </li>
 
             <li>
-              <a href="#">
+              <a
+                href="https://app.pastef.org/?_gl=1*b6ep01*_ga*MTI5NjU2NjI5MC4xNzgyNTY4MTg5*_ga_7C3WJHKRXC*czE3ODcxNzU4MDMkbzE2JGcxJHQxNzg3MTc4MzE0JGo1NCRsMCRoMA..."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <UserPlus size={16} />
                 Nous Rejoindre
               </a>

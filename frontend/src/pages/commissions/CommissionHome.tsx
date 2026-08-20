@@ -26,10 +26,7 @@ const CommissionHome: React.FC = () => {
 
           <div className="hero-actions">
             <button className="cyber-button">
-              <Link
-                to="/commissions/economie/dashboard"
-                className="button-link"
-              >
+              <Link to="/commissions/efpb/dashboard" className="button-link">
                 <span className="button-glitch"></span>
                 Découvrir la commission
               </Link>
