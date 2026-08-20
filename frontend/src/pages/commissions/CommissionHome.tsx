@@ -33,7 +33,7 @@ const CommissionHome: React.FC = () => {
             </button>
 
             <Link
-              to="/commissions/economie/publications"
+              to="/commissions/efpb/publications"
               className="outline-button button-link"
             >
               Nos publications
