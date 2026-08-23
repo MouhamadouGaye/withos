@@ -191,12 +191,20 @@ const Header: React.FC = () => {
         </button>
 
         <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
-          <NavLink to="/" onClick={() => setMobileOpen(false)}>
+          <NavLink
+            to="/"
+            className="menu-title"
+            onClick={() => setMobileOpen(false)}
+          >
             <Home className="arrow-icon" />
             <span> Accueil</span>
           </NavLink>
 
-          <NavLink to="/actualites" onClick={() => setMobileOpen(false)}>
+          <NavLink
+            to="/actualites"
+            className="menu-title"
+            onClick={() => setMobileOpen(false)}
+          >
             <FileTextIcon className="arrow-icon" />
             Actualités
           </NavLink>
