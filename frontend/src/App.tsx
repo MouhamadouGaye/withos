@@ -28,6 +28,8 @@ import CommissionPublications from "./pages/commissions/publication/CommissionPu
 import CommissionReports from "./pages/commissions/rapport/CommissionReports";
 import SenegalBudgetDashboard from "./pages/commissions/dashboard/budget/SenegalBudgetDashboard";
 import SenegalBudgetChartDetail from "./pages/commissions/dashboard/budget/pageCard/SenegalBudgetChartDetail";
+import PastefNews from "./pages/news/PastefNews";
+import PastefNewsDetail from "./pages/news/detail/PastefNewsDetail";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
@@ -112,7 +114,7 @@ const App: React.FC = () => {
                       <div className="stat-value">
                         {stats.email_subscribers.toLocaleString()}+
                       </div>
-                      <div className="stat-label">Email</div>
+                      <div className="stat-label">Adhésion</div>
                       <div className="stat-glow"></div>
                     </div>
                   </TiltCard>
@@ -176,6 +178,10 @@ const App: React.FC = () => {
           path="/finances-publiques/graphique/:chartSlug"
           element={<SenegalBudgetChartDetail />}
         />
+        {/* This part contains the news section */}
+        <Route path="/actualites" element={<PastefNews />} />
+
+        <Route path="/actualites/:slug" element={<PastefNewsDetail />} />
       </Routes>
     </BrowserRouter>
   );

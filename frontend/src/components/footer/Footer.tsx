@@ -21,6 +21,7 @@ import {
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 import "./Footer.css";
+import PastefLogo from "../logo/PastefLogo";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -42,17 +43,20 @@ const Footer: React.FC = () => {
         {/* Section Logo & Description */}
         <div className="footer-section">
           <div className="footer-logo">
-            <img
+            {/* <img
               src="/assets/sonko2029.png"
               alt="Avec Sonko 2029"
               className="footer-logo-img"
-            />
+            /> */}
+            <PastefLogo to="/" variant="white" className="footer-logo-img" />
             {/* <span className="footer-logo-text">Avec Sonko 2029</span> */}
+
+            <p className="footer-description">
+              Plateforme citoyenne de soutien et de coordination des
+              sympathisants de la vision portée par Ousmane Sonko
+            </p>
           </div>
-          <p className="footer-description">
-            Plateforme citoyenne de soutien et de coordination des sympathisants
-            de la vision portée par Ousmane Sonko
-          </p>
+
           {/* <div className="social-links">
             <a href="#" className="social-link">
               📘

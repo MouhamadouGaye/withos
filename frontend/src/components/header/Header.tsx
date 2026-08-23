@@ -63,6 +63,7 @@ import {
 } from "lucide-react";
 
 import "./Header.css";
+import PastefLogo from "../logo/PastefLogo";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -81,13 +82,9 @@ const Header: React.FC = () => {
   return (
     <header className={`header-2027 ${scrolled ? "header-scrolled" : ""}`}>
       <div className="header-inner">
-        <NavLink to="/" className="logo-link">
-          <img
-            src="/assets/sonko2029.png"
-            alt="Avec Sonko"
-            className="logo-image"
-          />
-        </NavLink>
+        {/* <NavLink to="/" className="logo-link">
+        </NavLink> */}
+        <PastefLogo to="/" variant="color" className="header-logo" />
 
         <nav className="desktop-menu">
           <NavLink to="/">Accueil</NavLink>

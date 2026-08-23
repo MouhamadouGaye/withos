@@ -301,7 +301,9 @@
 
 /* LOGO */
 .footer-logo {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+
   gap: 12px;
 }
 
@@ -310,11 +312,20 @@
   height: auto;
 }
 
-.footer-description {
+.footer-logo p {
+  margin-top: 10px;
   font-size: 0.9rem;
   line-height: 1.6;
   opacity: 0.75;
+  align-items: start;
+  text-align: left;
 }
+
+/* .footer-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.75;
+} */
 
 /* SOCIAL */
 .social-links {
