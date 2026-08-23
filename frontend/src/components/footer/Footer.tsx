@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               alt="Avec Sonko 2029"
               className="footer-logo-img"
             /> */}
-            <PastefLogo to="/" variant="white" className="footer-logo-img" />
+            <PastefLogo to="/" variant="white" />
             {/* <span className="footer-logo-text">Avec Sonko 2029</span> */}
 
             <p className="footer-description">

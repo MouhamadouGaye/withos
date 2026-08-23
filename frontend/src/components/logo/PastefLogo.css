@@ -1,3 +1,7 @@
+/* =========================================================
+   PASTEF FRANCE - LOGO CSS
+   ========================================================= */
+
 .pastef-logo {
   --pastef-green: #00843d;
   --pastef-green-dark: #006b32;
@@ -22,6 +26,10 @@
     opacity 0.25s ease;
 }
 
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
 .pastef-logo:hover {
   transform: translateY(-1px);
 }
@@ -32,6 +40,10 @@
   border-radius: 8px;
 }
 
+/* =========================================================
+   EMBLÈME
+   ========================================================= */
+
 .pastef-logo-mark {
   position: relative;
 
@@ -40,6 +52,10 @@
 
   flex-shrink: 0;
 }
+
+/* ---------------------------------------------------------
+   FORME PRINCIPALE DU LOGO
+   --------------------------------------------------------- */
 
 .pastef-logo-shape {
   position: absolute;
@@ -85,6 +101,10 @@
   transform: rotate(-8deg);
 }
 
+/* ---------------------------------------------------------
+   ÉTOILE
+   --------------------------------------------------------- */
+
 .pastef-logo-star {
   position: absolute;
 
@@ -102,6 +122,10 @@
 
   transform: rotate(-8deg);
 }
+
+/* ---------------------------------------------------------
+   TRAIT / SWOOSH INFÉRIEUR
+   --------------------------------------------------------- */
 
 .pastef-logo-swoosh {
   position: absolute;
@@ -121,12 +145,20 @@
   transform: rotate(-12deg) skewX(-25deg);
 }
 
+/* =========================================================
+   TEXTE
+   ========================================================= */
+
 .pastef-logo-text {
   display: flex;
   flex-direction: column;
 
   min-width: 0;
 }
+
+/* ---------------------------------------------------------
+   PASTEF
+   --------------------------------------------------------- */
 
 .pastef-logo-name {
   margin-top: -5px;
@@ -144,6 +176,10 @@
 
   transition: color 0.25s ease;
 }
+
+/* ---------------------------------------------------------
+   FRANCE
+   --------------------------------------------------------- */
 
 .pastef-logo-country {
   display: flex;
@@ -169,6 +205,10 @@
   transition: color 0.25s ease;
 }
 
+/* ---------------------------------------------------------
+   TRAITS AUTOUR DE FRANCE
+   --------------------------------------------------------- */
+
 .pastef-logo-line {
   display: block;
 
@@ -182,6 +222,10 @@
   transition: background 0.25s ease;
 }
 
+/* =========================================================
+   VARIANTE BLANCHE
+   ========================================================= */
+
 .pastef-logo-white {
   --pastef-green: #ffffff;
   --pastef-green-dark: #ffffff;
@@ -190,21 +234,31 @@
   color: #ffffff;
 }
 
+/* Texte blanc */
+
 .pastef-logo-white .pastef-logo-name {
   color: #ffffff;
 }
+
+/* FRANCE blanc */
 
 .pastef-logo-white .pastef-logo-france {
   color: #ffffff;
 }
 
+/* Traits blancs */
+
 .pastef-logo-white .pastef-logo-line {
   background: #ffffff;
 }
 
+/* Forme blanche */
+
 .pastef-logo-white .pastef-logo-shape {
   background: #ffffff;
 }
+
+/* On conserve une découpe visuelle sombre dans l'emblème */
 
 .pastef-logo-white .pastef-logo-shape::before {
   content: "";
@@ -226,11 +280,17 @@
   box-shadow: inset -12px 0 0 rgba(0, 0, 0, 0.15);
 }
 
+/* Étoile blanche */
+
 .pastef-logo-white .pastef-logo-star {
   color: #ffffff;
 
   text-shadow: 0 0 0 transparent;
 }
+
+/* =========================================================
+   COMPACT
+   ========================================================= */
 
 .pastef-logo-compact {
   gap: 9px;
@@ -272,6 +332,10 @@
   width: 18px;
   height: 2px;
 }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 768px) {
   .pastef-logo {
