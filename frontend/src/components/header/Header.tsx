@@ -60,6 +60,14 @@ import {
   ArrowRight,
   Menu,
   X,
+  LayoutDashboardIcon,
+  PanelsTopLeft,
+  PersonStandingIcon,
+  PodcastIcon,
+  UserPlusIcon,
+  FileTextIcon,
+  Home,
+  HomeIcon,
 } from "lucide-react";
 
 import "./Header.css";
@@ -184,26 +192,52 @@ const Header: React.FC = () => {
 
         <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
           <NavLink to="/" onClick={() => setMobileOpen(false)}>
-            Accueil
+            <Home className="arrow-icon" />
+            <span> Accueil</span>
           </NavLink>
 
           <NavLink to="/actualites" onClick={() => setMobileOpen(false)}>
+            <FileTextIcon className="arrow-icon" />
             Actualités
           </NavLink>
 
-          <div className="mobile-title">Commissions</div>
+          <NavLink to="/commissions" className="menu-title">
+            <PanelsTopLeft className="arrow-icon" />
+            <span> Commissions</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb">🏠 Accueil commission</NavLink>
+          <NavLink to="/commissions/efpb" className="menu-title">
+            <HomeIcon className="arrow-icon" />
+            <span> Accueil commission</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb/dashboard">📊 Dashboard</NavLink>
+          <NavLink
+            to="/commissions/efpb/finances-publiques"
+            className="menu-title"
+          >
+            <LayoutDashboardIcon className="arrow-icon" />
+            <span> Dashboard</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb/membres">👥 Membres</NavLink>
+          <NavLink to="/commissions/efpb/membres" className="menu-title">
+            <PersonStandingIcon className="arrow-icon" />
+            <span> Membres</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb/publications">📚 Publications</NavLink>
+          <NavLink to="/commissions/efpb/publications" className="menu-title">
+            <PodcastIcon className="arrow-icon" />
+            <span> Publications</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb/rapports">📄 Rapports</NavLink>
+          <NavLink to="/commissions/efpb/rapports" className="menu-title">
+            <FileTextIcon className="arrow-icon" />
+            <span> Rapports</span>
+          </NavLink>
 
-          <NavLink to="/commissions/efpb/rejoindre">🤝 Rejoindre</NavLink>
+          <NavLink to="/commissions/efpb/rejoindre" className="menu-title">
+            <UserPlusIcon className="arrow-icon" />
+            <span> Rejoindre</span>
+          </NavLink>
         </div>
 
         <a
