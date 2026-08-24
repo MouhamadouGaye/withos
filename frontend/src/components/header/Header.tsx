@@ -97,7 +97,7 @@ const Header: React.FC = () => {
         <nav className="desktop-menu">
           <NavLink to="/">Accueil</NavLink>
 
-          <NavLink to="/actualites">Actualités</NavLink>
+          <NavLink to="/commissions/actualites">Actualités</NavLink>
 
           <div
             className="mega-wrapper"
