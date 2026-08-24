@@ -209,7 +209,7 @@ const Header: React.FC = () => {
             Actualités
           </NavLink>
 
-          <NavLink to="/commissions" className="menu-title">
+          <NavLink to="/commissions/pastef-france" className="menu-title">
             <PanelsTopLeft className="arrow-icon" />
             <span> Commissions</span>
           </NavLink>
@@ -242,7 +242,7 @@ const Header: React.FC = () => {
             <span> Rapports</span>
           </NavLink>
 
-          <NavLink to="/commissions/efpb/rejoindre" className="menu-title">
+          <NavLink to="https://app.pastef.org" className="menu-title">
             <UserPlusIcon className="arrow-icon" />
             <span> Rejoindre</span>
           </NavLink>

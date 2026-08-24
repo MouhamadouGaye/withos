@@ -122,6 +122,108 @@ const tabs: Tab[] = [
   },
 
   {
+    title: "Commissions Moncap & PASTEF",
+
+    content:
+      "L’intelligence artificielle accélère la transformation numérique des organisations.",
+
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop",
+
+    sections: [
+      {
+        title: "Recherche",
+
+        items: [
+          {
+            number: "01",
+            title: "Economie, Finance publique et Budget",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "02",
+            title: "Numérique et Digitalisation",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "03",
+            title: "Bonne Gouernance Patriotes et Citoyenneté",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "04",
+            title: "Enseignement Supérieur et Formation Professionnelle",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "05",
+            title: "Affaire Étrangères et Panafricanisme",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "06",
+            title: "Santé et Protection Sociale",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "07",
+            title: "Éducation Nationale",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "08",
+            title: "Agriculture Pêche et Élevage",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "09",
+            title: "Commerce, Entrepreneuriat et PME",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "10",
+            title: "Transport et Infrastructures",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "11",
+            title: "Habitat et Aménagement du territoire",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "12",
+            title: "Enseignement Supérieur et Formation Professionnelle",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+          {
+            number: "13",
+            title: "Culture, Tourisme et Artisanat",
+            description: "Développer des centres de recherche spécialisés.",
+          },
+        ],
+      },
+
+      {
+        title: "Applications",
+
+        items: [
+          {
+            number: "02",
+            title: "Smart cities",
+            description:
+              "Optimiser les villes grâce aux données intelligentes.",
+          },
+          {
+            number: "03",
+            title: "Santé numérique",
+            description:
+              "Améliorer les soins grâce à l’intelligence artificielle.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: "Innovation & IA",
 
     content:
@@ -166,7 +268,7 @@ const tabs: Tab[] = [
 ];
 
 function CurvedTabs() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(3);
 
   const [openItems, setOpenItems] = useState<string[]>([]);
 

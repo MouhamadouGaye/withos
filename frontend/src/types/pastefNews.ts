@@ -22,7 +22,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/congres-2026.jpg",
+      src: "/images/pastef/congres-2026.jpeg",
       alt: "Congrès national du PASTEF à Dakar",
       credit: "PASTEF – Les Patriotes",
     },
@@ -64,7 +64,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/ousmane-sonko-congres.jpg",
+      src: "/images/pastef/ousmane-sonko-congres.jpeg",
       alt: "Ousmane Sonko lors du congrès de PASTEF",
       credit: "Presse",
     },
@@ -106,7 +106,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/gouvernement-2026.jpg",
+      src: "/images/pastef/gouvernement-2026.jpeg",
       alt: "Actualité politique sénégalaise en juin 2026",
       credit: "Reuters / AFP",
     },
@@ -150,7 +150,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/assemblee-nationale-sonko.jpg",
+      src: "/images/pastef/assemblee-nationale-sonko.jpeg",
       alt: "Ousmane Sonko à l'Assemblée nationale",
       credit: "Reuters",
     },
@@ -190,7 +190,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/cartes-membres.jpg",
+      src: "/images/pastef/cartes-membres.jpeg",
       alt: "Carte de membre PASTEF",
       credit: "PASTEF",
     },
@@ -222,7 +222,7 @@ export const pastefNews: PastefNewsArticle[] = [
     },
 
     image: {
-      src: "/images/pastef/diaspora.jpg",
+      src: "/images/pastef/diaspora.jpeg",
       alt: "Organisation de PASTEF auprès de la diaspora",
       credit: "PASTEF",
     },

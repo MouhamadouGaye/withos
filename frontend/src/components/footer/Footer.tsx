@@ -163,7 +163,7 @@ const Footer: React.FC = () => {
             </li>
 
             <li>
-              <a href="#">
+              <a href="/commissions/actualites">
                 <Newspaper size={16} />
                 Communiqués de Presse
               </a>

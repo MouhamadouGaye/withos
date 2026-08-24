@@ -136,12 +136,13 @@ const App: React.FC = () => {
           }
         ></Route>
         <Route path="/other" element={<BumpTabs />} />
-        <Route path="/curved" element={<CurvedTabs />} />
+        {/* <Route path="/curved" element={<CurvedTabs />} /> */}
         <Route path="/statuts" element={<StatutsParti />} />
         <Route path="/diagnostic" element={<Diagnostic />} />
         <Route path="/programme" element={<Projects />} />
 
         <Route path="/commissions" element={<CommissionHome />} />
+        <Route path="/commissions/pastef-france" element={<CurvedTabs />} />
 
         <Route path="/commissions/efpb" element={<CommissionEconomy />} />
         <Route
@@ -179,7 +180,7 @@ const App: React.FC = () => {
           element={<SenegalBudgetChartDetail />}
         />
         {/* This part contains the news section */}
-        <Route path="/actualites" element={<PastefNews />} />
+        <Route path="/commissions/actualites" element={<PastefNews />} />
 
         <Route path="/actualites/:slug" element={<PastefNewsDetail />} />
       </Routes>
