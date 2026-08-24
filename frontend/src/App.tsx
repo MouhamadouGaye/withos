@@ -172,7 +172,7 @@ const App: React.FC = () => {
           element={<CommissionDashboard />}
         />
         <Route
-          path="/finances-publiques"
+          path="/finances-publiques/repartition-de-la-masse-salariale"
           element={<SenegalBudgetDashboard />}
         />
         <Route

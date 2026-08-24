@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
 
             <li>
               <a
-                href="https://www.avecsonko.org/finances-publiques"
+                href="/finances-publiques/repartition-de-la-masse-salariale"
                 target="_blank"
                 rel="noopener noreferrer"
               >
