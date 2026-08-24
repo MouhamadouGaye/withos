@@ -131,7 +131,7 @@ body {
 
   border-radius: 38px;
 
-  padding: 36px;
+  padding: 16px;
 
   display: grid;
 
@@ -423,18 +423,24 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding: 30px 16px;
+    padding: 20px 10px;
+  }
+  .wrapper {
+    padding: 0px 0px;
+  }
+
+  .tab-nav {
+    padding: 20px;
+    border-radius: 26px;
   }
 
   .panel {
-    padding: 24px;
+    padding: 20px;
 
     border-radius: 26px;
   }
 
   .tab-btn {
-    width: 100%;
-
     border-radius: 20px;
 
     border-bottom: 1px solid transparent;
@@ -457,6 +463,6 @@ body {
   }
 
   .image-box {
-    min-height: 350px;
+    min-height: 300px;
   }
 }
