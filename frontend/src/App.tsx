@@ -146,7 +146,7 @@ const App: React.FC = () => {
 
         <Route path="/commissions/efpb" element={<CommissionEconomy />} />
         <Route
-          path="/commissions/efpb/publications"
+          path="/commissions/efpb/membres"
           element={<CommissionMembers />}
         />
 
