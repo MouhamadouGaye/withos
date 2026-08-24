@@ -567,7 +567,7 @@
 
   text-shadow: 0 0 18px rgba(61, 220, 151, 0.15);
 
-  animation: newsTitleMarquee 5s linear infinite;
+  animation: newsTitleMarquee 10s linear infinite;
 }
 
 /* ========================================================= */
@@ -579,15 +579,27 @@
     transform: translateX(0);
   }
 
-  15% {
+  /* 15% {
     transform: translateX(0);
   }
 
   85% {
-    transform: translateX(calc(-100% + 100vw));
+    transform: translateX(calc(100% + -100vw));
   }
 
   100% {
-    transform: translateX(calc(-100% + 100vw));
+    transform: translateX(calc(100% + -100vw));
+  } */
+
+  40% {
+    transform: translateX(-200px);
+  }
+
+  60% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
