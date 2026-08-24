@@ -201,7 +201,7 @@ const Header: React.FC = () => {
           </NavLink>
 
           <NavLink
-            to="/actualites"
+            to="/commissions/actualites"
             className="menu-title"
             onClick={() => setMobileOpen(false)}
           >
