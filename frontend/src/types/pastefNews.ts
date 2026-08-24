@@ -9,7 +9,7 @@ export const pastefNews: PastefNewsArticle[] = [
     title: "Congrès historique du parti PASTEF-Les Patriotes",
 
     excerpt:
-      "PASTEF a tenu son premier congrès ordinaire depuis sa création, dans un contexte de profonde reconfiguration de la scène politique sénégalaise.",
+      "PASTEF a tenu son premier congrès ordinaire depuis sa création. Organisé dans un contexte de recomposition de la scène politique sénégalaise, ce rendez-vous a permis au parti de faire le bilan de son action, de réaffirmer ses orientations et de préparer les prochaines étapes de son projet politique.",
 
     date: "2026-06-20",
 
@@ -51,7 +51,7 @@ export const pastefNews: PastefNewsArticle[] = [
     title: "Ousmane Sonko réélu à la présidence de PASTEF",
 
     excerpt:
-      "À l'occasion du premier congrès ordinaire du parti, Ousmane Sonko a été reconduit à la tête de PASTEF pour un nouveau mandat.",
+      "À l'occasion du premier congrès ordinaire du parti, Ousmane Sonko a été reconduit à la tête de PASTEF pour un nouveau mandat. Cette décision intervient alors que la formation politique occupe désormais une place centrale dans les institutions sénégalaises. Sa reconduction traduit la volonté des militants de maintenir une continuité dans la direction du parti et dans la mise en œuvre de ses orientations politiques.",
 
     date: "2026-06-06",
 
@@ -93,7 +93,7 @@ export const pastefNews: PastefNewsArticle[] = [
     title: "PASTEF et la nouvelle configuration gouvernementale",
 
     excerpt:
-      "La formation d'un nouveau gouvernement en juin 2026 a marqué une nouvelle étape dans les rapports entre le parti et l'exécutif.",
+      "La formation d'un nouveau gouvernement en juin 2026 a marqué une nouvelle étape dans l'organisation du pouvoir exécutif. Cette réorganisation intervient dans un contexte où les autorités cherchent à renforcer la coordination de l'action gouvernementale et à accélérer la mise en œuvre des engagements pris devant les Sénégalais. Elle intervient également alors que PASTEF poursuit sa structuration politique et institutionnelle.",
 
     date: "2026-06-02",
 
@@ -137,7 +137,7 @@ export const pastefNews: PastefNewsArticle[] = [
     title: "Ousmane Sonko élu président de l'Assemblée nationale",
 
     excerpt:
-      "Après son départ de la Primature, Ousmane Sonko a été élu à la présidence de l'Assemblée nationale.",
+      "Après son départ de la Primature, Ousmane Sonko a été élu à la présidence de l'Assemblée nationale. Cette évolution constitue un changement important dans l'organisation des responsabilités au sein de la majorité politique. Elle place désormais l'ancien Premier ministre à la tête de l'institution parlementaire, avec pour responsabilité de conduire les travaux de l'Assemblée et d'accompagner le fonctionnement du pouvoir législatif.",
 
     date: "2026-05-26",
 
@@ -177,7 +177,7 @@ export const pastefNews: PastefNewsArticle[] = [
     title: "PASTEF lance officiellement ses cartes de membre",
 
     excerpt:
-      "Le parti a lancé une plateforme permettant l'adhésion et l'activation des cartes de membre en ligne.",
+      "Le parti a lancé une plateforme numérique destinée à faciliter l'adhésion de nouveaux membres et l'activation des cartes de membre. Cette initiative s'inscrit dans une volonté de moderniser l'organisation interne du parti et de simplifier les démarches pour les militants. La digitalisation doit également permettre de mieux structurer les données relatives aux adhérents et de faciliter la participation à la vie du parti.",
 
     date: "2026-07-04",
 
@@ -209,7 +209,7 @@ export const pastefNews: PastefNewsArticle[] = [
       "PASTEF lance un appel à candidatures pour ses responsables de zone de la diaspora",
 
     excerpt:
-      "Le parti poursuit la structuration de ses organisations à l'extérieur du Sénégal.",
+      "Le parti a lancé une plateforme numérique destinée à faciliter l'adhésion de nouveaux membres et l'activation des cartes de membre. Cette initiative s'inscrit dans une volonté de moderniser l'organisation interne du parti et de simplifier les démarches pour les militants. La digitalisation doit également permettre de mieux structurer les données relatives aux adhérents et de faciliter la participation à la vie du parti.",
 
     date: "2026-07-08",
 

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { pastefNews } from "../../../types/pastefNews";
 import { formatDate } from "../card/CardNews";
+import "./PastefNewsDetail.css";
 
 export default function PastefNewsDetail() {
   const { slug } = useParams();
@@ -9,7 +10,7 @@ export default function PastefNewsDetail() {
 
   if (!article) {
     return (
-      <main>
+      <main className="main">
         <h1>Article introuvable</h1>
 
         <Link to="/actualites">Retour aux actualités</Link>
@@ -27,9 +28,10 @@ export default function PastefNewsDetail() {
         <header>
           <span className="news-category">{article.category}</span>
 
+          <img src={article.image.src} alt={article.image.alt} />
           <h1>{article.title}</h1>
 
-          <p>{article.excerpt}</p>
+          <p className="excerpt"> {article.excerpt}</p>
 
           <div>
             {formatDate(article.date)}
@@ -37,8 +39,6 @@ export default function PastefNewsDetail() {
             {article.source.name}
           </div>
         </header>
-
-        <img src={article.image.src} alt={article.image.alt} />
 
         <div className="news-detail-content">
           {article.content ? (

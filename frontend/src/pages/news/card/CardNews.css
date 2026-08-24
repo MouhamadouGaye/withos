@@ -1,6 +1,4 @@
-/* ========================================================= */
-/* NEWS CARD */
-/* ========================================================= */
+/* 
 
 .news-card {
   position: relative;
@@ -39,9 +37,7 @@
     background 0.35s ease;
 }
 
-/* ========================================================= */
-/* HOVER CARD */
-/* ========================================================= */
+
 
 .news-card:hover {
   transform: translateY(-8px);
@@ -60,9 +56,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* ========================================================= */
-/* IMAGE */
-/* ========================================================= */
 
 .news-card-image {
   position: relative;
@@ -116,9 +109,7 @@
   filter: saturate(1.1) brightness(1.05);
 }
 
-/* ========================================================= */
-/* CATEGORY */
-/* ========================================================= */
+
 
 .news-card-category {
   position: absolute;
@@ -157,9 +148,7 @@
     0 0 15px rgba(61, 220, 151, 0.05);
 }
 
-/* ========================================================= */
-/* CONTENT */
-/* ========================================================= */
+
 
 .news-card-content {
   position: relative;
@@ -172,9 +161,7 @@
   padding: 24px;
 }
 
-/* ========================================================= */
-/* TOP META */
-/* ========================================================= */
+
 
 .news-card-top {
   display: flex;
@@ -199,34 +186,7 @@
   color: rgba(61, 220, 151, 0.75);
 }
 
-/* ========================================================= */
-/* TITLE */
-/* ========================================================= */
 
-/* .news-card-content h3 {
-  margin: 0 0 13px;
-
-  color: #ffffff;
-
-  font-size: 1.25rem;
-
-  line-height: 1.25;
-
-  font-weight: 700;
-
-  letter-spacing: -0.025em;
-
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
-}
-
-.news-card:hover .news-card-content h3 {
-  color: #65f5b6;
-
-  text-shadow: 0 0 18px rgba(61, 220, 151, 0.15);
-} */
-/* ---------------- */
 .news-card-content h3 {
   margin: 0 0 13px;
 
@@ -295,12 +255,10 @@
   }
 }
 
-/* Le texte lui-même */
 .news-card-content h3 {
   text-overflow: ellipsis;
 }
 
-/* Hover */
 .news-card:hover .news-card-content h3 {
   color: #65f5b6;
 
@@ -327,9 +285,7 @@
   }
 }
 
-/* ========================================================= */
-/* EXCERPT */
-/* ========================================================= */
+
 
 .news-card-content p {
   margin: 0;
@@ -351,9 +307,6 @@
   text-align: start;
 }
 
-/* ========================================================= */
-/* FOOTER */
-/* ========================================================= */
 
 .news-card-footer {
   display: flex;
@@ -386,9 +339,6 @@
   text-overflow: ellipsis;
 }
 
-/* ========================================================= */
-/* ARROW */
-/* ========================================================= */
 
 .news-arrow {
   width: 36px;
@@ -428,9 +378,7 @@
   box-shadow: 0 0 20px rgba(61, 220, 151, 0.15);
 }
 
-/* ========================================================= */
-/* GLOW EFFECT */
-/* ========================================================= */
+
 
 .news-card::before {
   content: "";
@@ -462,9 +410,7 @@
   opacity: 1;
 }
 
-/* ========================================================= */
-/* ACCESSIBILITY */
-/* ========================================================= */
+
 
 .news-card:focus-visible {
   outline: 2px solid #65f5b6;
@@ -474,9 +420,6 @@
   box-shadow: 0 0 0 5px rgba(61, 220, 151, 0.12);
 }
 
-/* ========================================================= */
-/* RESPONSIVE */
-/* ========================================================= */
 
 @media (max-width: 768px) {
   .news-card {
@@ -527,9 +470,7 @@
   }
 }
 
-/* ========================================================= */
-/* REDUCED MOTION */
-/* ========================================================= */
+
 
 @media (prefers-reduced-motion: reduce) {
   .news-card,
@@ -545,5 +486,108 @@
 
   .news-card:hover .news-card-image img {
     transform: none;
+  }
+} */
+/* ========================================================= */
+/* TITLE */
+/* ========================================================= */
+
+.news-title-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 0 14px;
+
+  overflow: hidden;
+
+  /*
+   * Permet de garder une hauteur identique
+   * entre les différentes cards.
+   */
+  min-height: 32px;
+
+  /*
+   * Masque proprement le texte lorsqu'il dépasse.
+   */
+  mask-image: linear-gradient(to right, #000 0%, #000 88%, transparent 100%);
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 0%,
+    #000 88%,
+    transparent 100%
+  );
+}
+
+/* ========================================================= */
+/* TITRE */
+/* ========================================================= */
+
+.news-title-wrapper h3 {
+  display: block;
+
+  width: max-content;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: #ffffff;
+
+  font-size: 1.22rem;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
+
+  white-space: nowrap;
+
+  overflow: visible;
+
+  text-overflow: clip;
+
+  transform: translateX(0);
+
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+/* ========================================================= */
+/* HOVER */
+/* ========================================================= */
+
+.news-card:hover .news-title-wrapper h3 {
+  color: #65f5b6;
+
+  text-shadow: 0 0 18px rgba(61, 220, 151, 0.15);
+
+  animation: newsTitleMarquee 5s linear infinite;
+}
+
+/* ========================================================= */
+/* MARQUEE */
+/* ========================================================= */
+
+@keyframes newsTitleMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  15% {
+    transform: translateX(0);
+  }
+
+  85% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+
+  100% {
+    transform: translateX(calc(-100% + 100vw));
   }
 }

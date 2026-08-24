@@ -53,6 +53,14 @@ export default function PastefNews() {
     (article) => article.id !== featuredArticle?.id,
   );
 
+  function truncateText(text: string, maxLength = 180) {
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    return `${text.slice(0, maxLength).trim()}…`;
+  }
+
   return (
     <main className="pastef-news-page">
       {/* HERO */}
@@ -125,7 +133,7 @@ export default function PastefNews() {
 
               <h2>{featuredArticle.title}</h2>
 
-              <p>{featuredArticle.excerpt}</p>
+              <p>{truncateText(featuredArticle.excerpt, 180)}</p>
 
               <div className="news-meta">
                 <span>{formatDate(featuredArticle.date)}</span>
