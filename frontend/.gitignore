@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+node_modules/
+dist/
+.env
+data/*.csv
+*.log
+/src/pages/adhesion
+src/pages/adhesion
+/backend2
+backend2

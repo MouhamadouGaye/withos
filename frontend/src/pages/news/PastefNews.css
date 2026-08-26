@@ -209,6 +209,8 @@
 .featured-news {
   width: min(1250px, calc(100% - 40px));
 
+  /* height: min-content(800px, calc(100% - 40px)); */
+
   margin: 35px auto 70px;
 }
 
@@ -217,7 +219,8 @@
 
   grid-template-columns: 1.25fr 1fr;
 
-  min-height: 480px;
+  min-height: 400px;
+  height: 600px;
 
   overflow: hidden;
 

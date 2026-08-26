@@ -1,2 +1,13 @@
 ./env
 env
+node_modules/
+dist/
+.env
+data/*.csv
+*.log
+
+node_modules/
+dist/
+.env
+backend2/data/*.csv
+*.log

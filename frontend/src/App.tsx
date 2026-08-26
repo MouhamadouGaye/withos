@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import SupporterForm from "./components/forms/SupporterForm";
 
-import { apiService } from "./services/api";
+// import { apiService } from "./services/api";
 import "./App.css";
 import type { CampaignStats } from "./types";
 // import QuantumBackground from "./components/quantum/QuantumBackground";
@@ -30,12 +30,13 @@ import SenegalBudgetDashboard from "./pages/commissions/dashboard/budget/Senegal
 import SenegalBudgetChartDetail from "./pages/commissions/dashboard/budget/pageCard/SenegalBudgetChartDetail";
 import PastefNews from "./pages/news/PastefNews";
 import PastefNewsDetail from "./pages/news/detail/PastefNewsDetail";
+import AdhesionPage from "./pages/adhesion/AdhesionPage";
 
 const App: React.FC = () => {
   const [stats, setStats] = useState<CampaignStats>({
     total_supporters: 2345,
     whatsapp_members: 1022,
-    email_subscribers: 1509,
+    email_subscribers: 509,
   });
   const [showForm, setShowForm] = useState(false);
 
@@ -183,6 +184,7 @@ const App: React.FC = () => {
         <Route path="/commissions/actualites" element={<PastefNews />} />
 
         <Route path="/actualites/:slug" element={<PastefNewsDetail />} />
+        <Route path="/adhesion" element={<AdhesionPage />} />
       </Routes>
     </BrowserRouter>
   );
