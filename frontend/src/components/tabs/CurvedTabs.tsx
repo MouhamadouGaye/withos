@@ -145,61 +145,61 @@ const tabs: Tab[] = [
             title: "Numérique et Digitalisation",
             description: "Développer des centres de recherche spécialisés.",
           },
-          {
-            number: "03",
-            title: "Bonne Gouernance Patriotes et Citoyenneté",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "04",
-            title: "Enseignement Supérieur et Formation Professionnelle",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "05",
-            title: "Affaire Étrangères et Panafricanisme",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "06",
-            title: "Santé et Protection Sociale",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "07",
-            title: "Éducation Nationale",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "08",
-            title: "Agriculture Pêche et Élevage",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "09",
-            title: "Commerce, Entrepreneuriat et PME",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "10",
-            title: "Transport et Infrastructures",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "11",
-            title: "Habitat et Aménagement du territoire",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "12",
-            title: "Enseignement Supérieur et Formation Professionnelle",
-            description: "Développer des centres de recherche spécialisés.",
-          },
-          {
-            number: "13",
-            title: "Culture, Tourisme et Artisanat",
-            description: "Développer des centres de recherche spécialisés.",
-          },
+          // {
+          //   number: "03",
+          //   title: "Bonne Gouernance Patriotes et Citoyenneté",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "04",
+          //   title: "Enseignement Supérieur et Formation Professionnelle",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "05",
+          //   title: "Affaire Étrangères et Panafricanisme",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "06",
+          //   title: "Santé et Protection Sociale",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "07",
+          //   title: "Éducation Nationale",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "08",
+          //   title: "Agriculture Pêche et Élevage",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "09",
+          //   title: "Commerce, Entrepreneuriat et PME",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "10",
+          //   title: "Transport et Infrastructures",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "11",
+          //   title: "Habitat et Aménagement du territoire",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "12",
+          //   title: "Enseignement Supérieur et Formation Professionnelle",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
+          // {
+          //   number: "13",
+          //   title: "Culture, Tourisme et Artisanat",
+          //   description: "Développer des centres de recherche spécialisés.",
+          // },
         ],
       },
 

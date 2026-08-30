@@ -1,8 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
   <url>
     <loc>https://avecsonko.org</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
+  </url>
+</urlset>
+ -->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://avecsonko.org</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Pages Institutionnelles -->
+  <url>
+    <loc>https://avecsonko.orgstatuts</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgdiagnostic</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgprogramme</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Commissions Générales -->
+  <url>
+    <loc>https://avecsonko.orgcommissions</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgcommissions/pastef-france</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgcommissions/actualites</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Commission EFPB (Économie, Finances, Plan, Budget) -->
+  <url>
+    <loc>https://avecsonko.orgcommissions/efpb</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgcommissions/efpb/membres</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgcommissions/efpb/publications</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://avecsonko.orgcommissions/efpb/rapports</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Analyses & Finances Publiques -->
+  <url>
+    <loc>https://avecsonko.orgfinances-publiques/repartition-de-la-masse-salariale</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>
