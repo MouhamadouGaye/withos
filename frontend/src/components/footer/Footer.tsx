@@ -40,6 +40,10 @@ const Footer: React.FC = () => {
     window.location.href = `mailto:pastef.online@gmail.com?subject=Newsletter&body=Bonjour, je souhaite rejoindre la newsletter avec cet email : ${email}`;
   };
 
+  const openPdf = (file: string) => {
+    setChosenFile(file);
+    setOpen(true);
+  };
   return (
     <>
       {/* <div>
@@ -168,10 +172,9 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   type="button"
-                  onClick={() => {
-                    setOpen(true);
-                    setChosenFile("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf");
-                  }}
+                  onClick={() =>
+                    openPdf("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf")
+                  }
                 >
                   <FileText size={16} />
                   Statuts du Parti
@@ -181,13 +184,12 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   type="button"
-                  // className="footer-pdf-button"
-                  onClick={() => {
-                    setOpen(true);
-                    setChosenFile(
+                  onClick={() =>
+                    openPdf(
                       "/assets/Reglement-interieur-Pastef-Juillet-2025.pdf",
-                    );
-                  }}
+                    )
+                  }
+                  // className="footer-pdf-button"
                 >
                   <BookOpen size={16} />
                   <span> Guide du Militant</span>
@@ -205,10 +207,9 @@ const Footer: React.FC = () => {
                 <button
                   type="button"
                   // className="footer-pdf-button"
-                  onClick={() => {
-                    setOpen(true);
-                    setChosenFile("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf");
-                  }}
+                  onClick={() =>
+                    openPdf("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf")
+                  }
                 >
                   <ShieldCheck size={16} />
                   <span>Charte Éthique</span>
