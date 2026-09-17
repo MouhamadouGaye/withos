@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         {open && (
           <PdfViewer
             file={chosenFile}
@@ -51,7 +51,21 @@ const Footer: React.FC = () => {
             onClose={() => setOpen(false)}
           />
         )}
-      </div>
+      </div> */}
+      {open && (
+        <>
+          <div style={{ position: "fixed", zIndex: 99999 }}>
+            PDF : {chosenFile}
+          </div>
+
+          <PdfViewer
+            file={chosenFile}
+            title="Charte Éthique"
+            subtitle="DOCUMENT OFFICIEL"
+            onClose={() => setOpen(false)}
+          />
+        </>
+      )}
       <footer className="footer">
         <div className="footer-container">
           {/* Section Logo & Description */}

@@ -441,6 +441,9 @@
 
   border: none;
 
+  padding: 0 7px;
+  margin-left: -7px;
+
   background: none;
 
   color: white;
@@ -541,9 +544,8 @@
 
 .mega-menu {
   position: absolute;
-
   /* top: 30px; */
-
+  background-color: black;
   top: calc(100% + 5px);
 
   left: -90%;
@@ -584,6 +586,7 @@
     transform 0.35s ease,
     visibility 0.35s;
 }
+
 .mega-menu::before {
   content: "";
 
@@ -592,7 +595,6 @@
   top: -35px;
   left: 0;
   right: 0;
-  background-color: red;
 
   height: 32px;
 }
