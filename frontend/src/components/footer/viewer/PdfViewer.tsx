@@ -10,13 +10,12 @@ import { Document, Page, pdfjs } from "react-pdf";
 
 import "./PdfViewer.css";
 
-import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
-
-pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
-// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-//   "pdfjs-dist/build/pdf.worker.min.mjs",
-//   import.meta.url,
-// ).toString();
+// import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+// pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url,
+).toString();
 
 interface PdfViewerProps {
   file: string;
@@ -49,6 +48,28 @@ const PdfViewer: React.FC<PdfViewerProps> = ({
     x: 50,
     y: 50,
   });
+
+  useEffect(() => {
+    const updateWidth = () => {
+      const width = window.innerWidth;
+
+      if (width <= 480) {
+        setPageWidth(width - 32);
+      } else if (width <= 768) {
+        setPageWidth(width - 48);
+      } else {
+        setPageWidth(700);
+      }
+    };
+
+    updateWidth();
+
+    window.addEventListener("resize", updateWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+    };
+  }, []);
 
   useEffect(() => {
     const updateWidth = () => {
@@ -387,6 +408,7 @@ const PdfViewer: React.FC<PdfViewerProps> = ({
                     transformOrigin: "top center",
                   }}
                 >
+                  {/* This where the pdf page is  */}
                   <Page
                     pageNumber={pageNumber}
                     scale={1}
