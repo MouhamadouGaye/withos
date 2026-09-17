@@ -381,6 +381,7 @@ const PdfViewer: React.FC<PdfViewerProps> = ({
                   className="pdf-page-shadow"
                   style={{
                     transform: `scale(${zoom})`,
+                    transformOrigin: "top center",
                   }}
                 >
                   <Page
