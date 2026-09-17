@@ -132,7 +132,20 @@
   gap: 10px;
 }
 
-.footer-links a:hover {
+.footer-links button {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links a:hover,
+button:hover {
   color: var(--green-primary);
   padding-left: 6px;
 }

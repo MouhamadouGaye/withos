@@ -542,9 +542,11 @@
 .mega-menu {
   position: absolute;
 
-  top: 20px;
+  /* top: 30px; */
 
-  left: -60%;
+  top: calc(100% + 8px);
+
+  left: -90%;
 
   transform: translateX(-50%) translateY(20px);
 
@@ -582,7 +584,18 @@
     transform 0.35s ease,
     visibility 0.35s;
 }
+.mega-menu::before {
+  content: "";
 
+  position: absolute;
+
+  top: -35px;
+  left: 0;
+  right: 0;
+  background-color: red;
+
+  height: 32px;
+}
 .mega-menu.show {
   opacity: 1;
 
@@ -673,6 +686,8 @@
   overflow: hidden;
 
   gap: 15px;
+
+  padding-top: 7px;
 }
 
 .mega-card {
