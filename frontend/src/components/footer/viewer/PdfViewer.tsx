@@ -41,11 +41,33 @@ const PdfViewer: React.FC<PdfViewerProps> = ({
 
   const [direction, setDirection] = useState<Direction>("next");
   const [pageKey, setPageKey] = useState(0);
-
+  const [pageWidth, setPageWidth] = useState(700);
   const [mousePosition, setMousePosition] = useState({
     x: 50,
     y: 50,
   });
+
+  useEffect(() => {
+    const updateWidth = () => {
+      const width = window.innerWidth;
+
+      if (width <= 480) {
+        setPageWidth(width - 32);
+      } else if (width <= 768) {
+        setPageWidth(width - 48);
+      } else {
+        setPageWidth(700);
+      }
+    };
+
+    updateWidth();
+
+    window.addEventListener("resize", updateWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+    };
+  }, []);
 
   const viewerRef = useRef<HTMLDivElement>(null);
 
@@ -364,7 +386,8 @@ const PdfViewer: React.FC<PdfViewerProps> = ({
                   <Page
                     pageNumber={pageNumber}
                     scale={1}
-                    width={700}
+                    // width={700}
+                    width={pageWidth}
                     renderTextLayer={false}
                     renderAnnotationLayer={false}
                   />
