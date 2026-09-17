@@ -3,7 +3,6 @@ import "./Hero.css";
 
 interface HeroSectionProps {
   onJoinClick: () => void;
-  style: string | number;
 }
 
 const Hero: React.FC<HeroSectionProps> = () =>
