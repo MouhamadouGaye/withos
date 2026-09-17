@@ -5,7 +5,6 @@ import {
   BookOpen,
   UserPlus,
   Calendar,
-  Mail,
   FileText,
   ShieldCheck,
   Newspaper,
