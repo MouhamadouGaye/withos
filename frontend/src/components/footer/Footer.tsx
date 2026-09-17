@@ -26,6 +26,7 @@ import PdfViewer from "./viewer/PdfViewer";
 
 const Footer: React.FC = () => {
   const [open, setOpen] = useState<boolean>();
+  const [chosenFile, setChosenFile] = useState("");
   const currentYear = new Date().getFullYear();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -44,7 +45,7 @@ const Footer: React.FC = () => {
       <div>
         {open && (
           <PdfViewer
-            file="/assets/Statuts-PASTEF-LES-PATRIOTES.pdf"
+            file={chosenFile}
             title="Charte Éthique"
             subtitle="DOCUMENT OFFICIEL"
             onClose={() => setOpen(false)}
@@ -151,25 +152,32 @@ const Footer: React.FC = () => {
 
             <ul className="footer-links">
               <li>
-                <a
-                  href="/assets/Statuts-PASTEF-LES-PATRIOTES.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOpen(true);
+                    setChosenFile("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf");
+                  }}
                 >
                   <FileText size={16} />
                   Statuts du Parti
-                </a>
+                </button>
               </li>
 
               <li>
-                <a
-                  href="/assets/Reglement-interieur-Pastef-Juillet-2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  // className="footer-pdf-button"
+                  onClick={() => {
+                    setOpen(true);
+                    setChosenFile(
+                      "/assets/Reglement-interieur-Pastef-Juillet-2025.pdf",
+                    );
+                  }}
                 >
                   <BookOpen size={16} />
-                  Guide du Militant
-                </a>
+                  <span> Guide du Militant</span>
+                </button>
               </li>
 
               {/* <li>
@@ -183,7 +191,10 @@ const Footer: React.FC = () => {
                 <button
                   type="button"
                   // className="footer-pdf-button"
-                  onClick={() => setOpen(true)}
+                  onClick={() => {
+                    setOpen(true);
+                    setChosenFile("/assets/Statuts-PASTEF-LES-PATRIOTES.pdf");
+                  }}
                 >
                   <ShieldCheck size={16} />
                   <span>Charte Éthique</span>
